@@ -47,10 +47,34 @@
         <h3>Team Progress</h3>
         <div id="progressDisplay"></div>
     </div>
+
+    <!-- Annotated Brief Review (verification & reveal phases) -->
+    <div class="control-card full-width hidden" id="reviewBriefSection">
+        <h3>Review Team Briefs</h3>
+        <div class="form-group">
+            <label for="reviewTeamSelect">Select fabricating team</label>
+            <select id="reviewTeamSelect" onchange="loadTeamBrief()">
+                <option value="">Choose a team...</option>
+            </select>
+        </div>
+        <div id="reviewBriefContainer" class="hidden">
+            <div style="display: grid; grid-template-columns: 1fr 320px; gap: 1rem; margin-top: 1rem;">
+                <div class="brief-panel" style="max-height: 60vh;">
+                    <div class="brief-text" id="reviewBriefText"></div>
+                </div>
+                <div class="side-panel" style="top: auto; max-height: 60vh;">
+                    <div id="reviewAnnotationPanel">
+                        <div class="empty-state">Select a highlighted citation to see details</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
+<script src="{{ url_for('static', filename='js/review-brief.js') }}"></script>
 <script>
 const API = {
     token: localStorage.getItem('prof_session_token'),
@@ -115,6 +139,7 @@ async function pollStatus() {
         renderTeams(status.teams, status.unassigned_players);
         renderControls(status.phase);
         renderProgress(status.teams, status.phase);
+        updateReviewSection(status.teams, status.phase);
         updateTimer();
     } catch (e) {}
 }
@@ -172,6 +197,17 @@ function renderControls(phase) {
                 <input type="number" id="fabMinutes" value="20" min="1" max="60">
             </div>
             <button class="btn btn-primary btn-block btn-lg" onclick="startGame()">Start Fabrication Phase</button>
+            <hr style="margin: 1.5rem 0; border-color: var(--gray-100);">
+            <h4 style="font-size: 0.875rem; color: var(--gray-500); margin-bottom: 0.75rem;">Or skip straight to verification</h4>
+            <div class="form-group">
+                <label for="skipNumSwaps">Citations to alter per team</label>
+                <input type="number" id="skipNumSwaps" value="8" min="1" max="23">
+            </div>
+            <div class="form-group">
+                <label for="skipVerMinutes">Verification Time (minutes)</label>
+                <input type="number" id="skipVerMinutes" value="15" min="1" max="60">
+            </div>
+            <button class="btn btn-primary btn-block" onclick="skipToVerification()">Skip to Verification</button>
         `;
     } else if (phase === 'fabrication') {
         html = `
@@ -230,6 +266,14 @@ async function startGame() {
     pollStatus();
 }
 
+async function skipToVerification() {
+    const numSwaps = parseInt(document.getElementById('skipNumSwaps')?.value || '8');
+    const minutes = parseInt(document.getElementById('skipVerMinutes')?.value || '15');
+    const data = await API.post('/api/game/skip-fabrication', { num_swaps: numSwaps, minutes });
+    if (data.error) { alert(data.error); return; }
+    pollStatus();
+}
+
 async function startVerification() {
     const minutes = parseInt(document.getElementById('verMinutes')?.value || '15');
     const data = await API.post('/api/game/swap', { minutes });
@@ -248,6 +292,70 @@ async function resetGame() {
     const data = await API.post('/api/game/reset', {});
     if (data.error) { alert(data.error); return; }
     pollStatus();
+}
+
+// ── Review Brief ────────────────────────────────────────────────────
+let reviewBriefData = null;
+let reviewAnnotations = null;
+let reviewTeams = [];
+
+function updateReviewSection(teams, phase) {
+    const section = document.getElementById('reviewBriefSection');
+    if (phase !== 'verification' && phase !== 'reveal') {
+        section.classList.add('hidden');
+        return;
+    }
+    section.classList.remove('hidden');
+
+    // Update team selector if teams changed
+    const select = document.getElementById('reviewTeamSelect');
+    const teamIds = teams.map(t => t.team_id).join(',');
+    const prevIds = reviewTeams.map(t => t.team_id).join(',');
+    if (teamIds !== prevIds) {
+        reviewTeams = teams;
+        const current = select.value;
+        select.innerHTML = '<option value="">Choose a team...</option>' +
+            teams.map(t => `<option value="${t.team_id}">${t.team_name}</option>`).join('');
+        if (current) select.value = current;
+    }
+}
+
+async function loadTeamBrief() {
+    const teamId = document.getElementById('reviewTeamSelect').value;
+    const container = document.getElementById('reviewBriefContainer');
+    if (!teamId) {
+        container.classList.add('hidden');
+        return;
+    }
+
+    const data = await ReviewBrief.loadReviewBrief(teamId, API.headers());
+    if (data.error) {
+        container.classList.remove('hidden');
+        document.getElementById('reviewBriefText').textContent = 'Error: ' + data.error;
+        return;
+    }
+
+    reviewBriefData = data.brief;
+    reviewAnnotations = data.annotations;
+
+    const showVerdicts = currentPhase === 'reveal';
+
+    ReviewBrief.setClickCallback(function (citationId) {
+        ReviewBrief.renderAnnotationPanel(
+            document.getElementById('reviewAnnotationPanel'),
+            citationId, reviewAnnotations, reviewBriefData, showVerdicts
+        );
+    });
+
+    container.classList.remove('hidden');
+    ReviewBrief.renderAnnotatedBrief(
+        document.getElementById('reviewBriefText'),
+        reviewBriefData, reviewAnnotations,
+        true
+    );
+    // Reset annotation panel
+    document.getElementById('reviewAnnotationPanel').innerHTML =
+        '<div class="empty-state">Select a highlighted citation to see details</div>';
 }
 
 function updateTimer() {

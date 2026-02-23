@@ -13,9 +13,39 @@
     <div class="type-stats" id="typeStats"></div>
 
     <div id="detailsSection" class="mt-3"></div>
+
+    <!-- Annotated Brief Review -->
+    <div id="annotatedBriefSection" class="mt-3" style="display:none;">
+        <div class="score-card">
+            <h3>Annotated Brief Review</h3>
+            <p style="color: var(--gray-500); font-size: 0.875rem; margin-bottom: 1rem;">
+                See each team's fabricated brief with all hallucinations highlighted by type.
+            </p>
+            <div class="form-group">
+                <label for="briefTeamSelect">Select fabricating team</label>
+                <select id="briefTeamSelect" onchange="loadAnnotatedBrief()">
+                    <option value="">Choose a team...</option>
+                </select>
+            </div>
+            <div id="annotatedBriefContainer" class="hidden">
+                <div id="briefTeamInfo" style="font-size: 0.8125rem; color: var(--gray-500); margin-bottom: 0.75rem;"></div>
+                <div style="display: grid; grid-template-columns: 1fr 320px; gap: 1rem;">
+                    <div class="brief-panel" style="max-height: 60vh; border: 1px solid var(--gray-200);">
+                        <div class="brief-text" id="annotatedBriefText"></div>
+                    </div>
+                    <div class="side-panel" style="top: auto; max-height: 60vh;">
+                        <div id="annotationPanel">
+                            <div class="empty-state">Select a highlighted citation to see details</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 {% endblock %}
 
 {% block scripts %}
+<script src="{{ url_for('static', filename='js/review-brief.js') }}"></script>
 <script src="{{ url_for('static', filename='js/scoreboard.js') }}"></script>
 {% endblock %}

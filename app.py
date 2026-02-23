@@ -152,6 +152,51 @@ def api_start_game():
     return jsonify({'ok': True, 'phase': 'fabrication'})
 
 
+@app.route('/api/game/skip-fabrication', methods=['POST'])
+def api_skip_fabrication():
+    """Skip fabrication phase — auto-generate swaps and jump to verification."""
+    player, err, code = require_professor()
+    if err:
+        return err, code
+
+    data = request.json or {}
+    minutes = data.get('minutes', 15)
+    num_swaps = data.get('num_swaps', 8)
+
+    game = db.get_game(player['game_id'])
+    if not game:
+        return jsonify({'error': 'Game not found'}), 404
+
+    teams = db.get_teams(game['game_id'])
+    team_list = list(teams)
+
+    if len(team_list) < 2:
+        return jsonify({'error': 'Need at least 2 teams'}), 400
+
+    brief_id = game['brief_id']
+
+    # Set up team rotation and generate swaps for each team
+    for i, team in enumerate(team_list):
+        # Same rotation as api_start_game: team i verifies team (i-1)'s swaps
+        db.set_team_briefs(
+            team['team_id'],
+            fabrication_brief=brief_id,
+            verification_brief=brief_id,
+            fabrication_team=team_list[(i - 1) % len(team_list)]['team_id']
+        )
+
+        # Generate and insert random swaps for this team
+        swaps = gs.generate_random_swaps(brief_id, num_swaps)
+        for swap in swaps:
+            db.upsert_swap(
+                game['game_id'], team['team_id'],
+                swap['citation_id'], swap['hallucination_type'], swap['option_id']
+            )
+
+    db.set_game_phase(game['game_id'], 'verification', timer_iso(minutes))
+    return jsonify({'ok': True, 'phase': 'verification'})
+
+
 @app.route('/api/game/swap', methods=['POST'])
 def api_swap_phase():
     """End Phase 1, start Phase 2 (verification)."""
@@ -447,6 +492,92 @@ def api_team_progress():
         'swaps': [{'citation_id': s['citation_id'], 'hallucination_type': s['hallucination_type'],
                     'option_id': s['option_id']} for s in swaps],
         'flags': [{'citation_id': f['citation_id'], 'verdict': f['verdict']} for f in flags]
+    })
+
+
+@app.route('/api/game/review-brief')
+def api_review_brief():
+    """Get annotated brief with hallucinations highlighted for review."""
+    player, err, code = require_player()
+    if err:
+        return err, code
+
+    game = db.get_game(player['game_id'])
+    if not game:
+        return jsonify({'error': 'Game not found'}), 404
+
+    phase = game['phase']
+    if phase not in ('verification', 'reveal'):
+        return jsonify({'error': 'Not available in this phase'}), 400
+
+    # During verification, professor only
+    if phase == 'verification' and not player['is_professor']:
+        return jsonify({'error': 'Only the professor can view briefs during verification'}), 403
+
+    fab_team_id = request.args.get('fab_team_id')
+    if not fab_team_id:
+        return jsonify({'error': 'fab_team_id is required'}), 400
+
+    fab_team = db.get_team(fab_team_id)
+    if not fab_team or fab_team['game_id'] != game['game_id']:
+        return jsonify({'error': 'Team not found'}), 404
+
+    brief_id = game['brief_id']
+
+    # Load this team's swaps
+    fab_swaps = db.get_swaps(game['game_id'], fab_team_id)
+    swap_dicts = [{'citation_id': s['citation_id'], 'hallucination_type': s['hallucination_type'],
+                   'option_id': s['option_id']} for s in fab_swaps]
+
+    # Get the modified brief
+    brief = gs.get_brief_for_display(brief_id, swaps=swap_dicts)
+
+    # Build annotations keyed by citation_id
+    hallucinations = gs.load_hallucinations(brief_id)
+    annotations = {}
+    for swap in swap_dicts:
+        cid = swap['citation_id']
+        htype = swap['hallucination_type']
+        oid = swap['option_id']
+        cite_data = hallucinations.get(cid, {})
+        option = None
+        for opt in cite_data.get('options', {}).get(htype, []):
+            if opt['id'] == oid:
+                option = opt
+                break
+        if option:
+            annotations[cid] = {
+                'hallucination_type': htype,
+                'option_label': option.get('label', ''),
+                'original_text': option.get('original_text', ''),
+                'replacement_text': option.get('replacement_text', ''),
+                'replacement_citation': option.get('replacement_citation', ''),
+                'original_display': cite_data.get('original_display', ''),
+            }
+
+    # During reveal, include verifier verdicts
+    ver_team_name = None
+    if phase == 'reveal':
+        teams = db.get_teams(game['game_id'])
+        for team in teams:
+            if team['fabrication_team'] == fab_team_id:
+                # This team verified the fab_team's work
+                ver_flags = db.get_flags(game['game_id'], team['team_id'])
+                ver_team_name = team['team_name']
+                for f in ver_flags:
+                    cid = f['citation_id']
+                    if cid in annotations:
+                        annotations[cid]['caught'] = f['verdict'] == 'fake'
+                    # Also mark non-swapped citations that were flagged
+                    elif f['verdict'] == 'fake':
+                        annotations.setdefault(cid, {})['false_flag'] = True
+                break
+
+    return jsonify({
+        'brief': brief,
+        'annotations': annotations,
+        'fab_team_name': fab_team['team_name'],
+        'ver_team_name': ver_team_name,
     })
 
 

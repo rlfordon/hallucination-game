@@ -6,14 +6,14 @@
       "fabricated_case": [
         {
           "id": "cite_01_fab_1",
-          "label": "Subtle misspelling of party name",
-          "replacement_citation": "McTiernan v. City of York, 564 F.3d 636, 646 (3d. Cir. 2009) (citations omitted)",
-          "difficulty": "hard"
+          "label": "Fabricated Third Circuit motion to dismiss case",
+          "replacement_citation": "Harrington v. City of Lancaster, 578 F.3d 412, 419 (3d Cir. 2010) (citations omitted)",
+          "difficulty": "medium"
         },
         {
           "id": "cite_01_fab_2",
-          "label": "Entirely fabricated Third Circuit case",
-          "replacement_citation": "Harrington v. City of Lancaster, 578 F.3d 412, 419 (3d Cir. 2010) (citations omitted)",
+          "label": "Fabricated Third Circuit civil rights case",
+          "replacement_citation": "Dietrich v. City of Reading, 571 F.3d 504, 510 (3d Cir. 2009) (citations omitted)",
           "difficulty": "medium"
         }
       ],
@@ -55,18 +55,25 @@
     "case_name": "Ashcroft v. Iqbal",
     "original_display": "Ashcroft v. Iqbal, 556 U.S. 662 (2009)",
     "options": {
-      "fabricated_case": [],
+      "fabricated_case": [
+        {
+          "id": "cite_02_fab_1",
+          "label": "Fabricated Supreme Court pleading standards case",
+          "replacement_citation": "Crawford v. Metropolitan Life Ins. Co., 553 U.S. 218 (2008)",
+          "difficulty": "easy"
+        }
+      ],
       "wrong_citation": [
         {
           "id": "cite_02_wc_1",
-          "label": "Wrong year (2011 instead of 2009)",
-          "replacement_citation": "Ashcroft v. Iqbal, 556 U.S. 662, 678 (2011)",
+          "label": "Wrong starting page (686 instead of 662)",
+          "replacement_citation": "Ashcroft v. Iqbal, 556 U.S. 686 (2009)",
           "difficulty": "medium"
         },
         {
           "id": "cite_02_wc_2",
-          "label": "Wrong starting page (686 instead of 662)",
-          "replacement_citation": "Ashcroft v. Iqbal, 556 U.S. 686 (2009)",
+          "label": "Wrong volume (558 instead of 556)",
+          "replacement_citation": "Ashcroft v. Iqbal, 558 U.S. 662 (2009)",
           "difficulty": "medium"
         }
       ],
@@ -96,9 +103,9 @@
       "fabricated_case": [
         {
           "id": "cite_03_fab_1",
-          "label": "Wrong volume and year (pre-dates actual decision)",
-          "replacement_citation": "Bell Atlantic Corp. V. Twombly, 540 U.S. 544, 557 (2005)",
-          "difficulty": "medium"
+          "label": "Fabricated Supreme Court pleading standards case",
+          "replacement_citation": "Riverbend Assocs. v. Slattery, 549 U.S. 312, 320 (2007)",
+          "difficulty": "easy"
         }
       ],
       "wrong_citation": [
@@ -107,13 +114,19 @@
           "label": "Wrong pinpoint page (555 instead of 557)",
           "replacement_citation": "Bell Atlantic Corp. V. Twombly, 550 U.S. 544, 555 (2007)",
           "difficulty": "medium"
+        },
+        {
+          "id": "cite_03_wc_2",
+          "label": "Wrong volume (552 instead of 550)",
+          "replacement_citation": "Bell Atlantic Corp. V. Twombly, 552 U.S. 544, 557 (2007)",
+          "difficulty": "medium"
         }
       ],
       "mischaracterization": [
         {
           "id": "cite_03_mc_1",
           "label": "Dramatically overstated pleading standard",
-          "original_text": "‘labels and conclusions’ or ‘a formulaic recitation of the elements of a cause of action will not do.’",
+          "original_text": "\u2018labels and conclusions\u2019 or \u2018a formulaic recitation of the elements of a cause of action will not do.\u2019",
           "replacement_text": "specific evidentiary facts demonstrating a reasonable likelihood of success are required to state a claim.",
           "difficulty": "hard"
         }
@@ -128,18 +141,25 @@
       "fabricated_case": [
         {
           "id": "cite_04_fab_1",
-          "label": "Misspelled party name (Keisling)",
-          "replacement_citation": "Keisling v. State Farm Mut. Auto Ins. Co., 2019 US. Dist. LEXIS 24085, at *5-6 (E.D. Pa. 2019)",
-          "difficulty": "hard"
-        },
-        {
-          "id": "cite_04_fab_2",
-          "label": "Entirely fabricated case",
-          "replacement_citation": "Patterson v. State Farm Mut. Auto Ins. Co., 2019 U.S. Dist. LEXIS 31742 (E.D. Pa. 2019)",
+          "label": "Fabricated E.D. Pa. insurance bad faith case",
+          "replacement_citation": "Patterson v. State Farm Mut. Auto Ins. Co., 2019 U.S. Dist. LEXIS 31742, at *5-6 (E.D. Pa. 2019)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_04_wc_1",
+          "label": "Transposed LEXIS digits (24805 instead of 24085)",
+          "replacement_citation": "Kiessling v. State Farm Mut. Auto Ins. Co., 2019 US. Dist. LEXIS 24805, at *5-6 (E.D. Pa. 2019)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "cite_04_wc_2",
+          "label": "Wrong LEXIS year (2018 instead of 2019)",
+          "replacement_citation": "Kiessling v. State Farm Mut. Auto Ins. Co., 2018 US. Dist. LEXIS 24085, at *5-6 (E.D. Pa. 2019)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [
         {
           "id": "cite_04_mc_1",
@@ -165,16 +185,22 @@
       "fabricated_case": [
         {
           "id": "cite_05_fab_1",
-          "label": "Wrong company name and fabricated numbers",
-          "replacement_citation": "Brown v. Progressive Casualty Insurance Company, 862 A.2d 519 (Pa. Super. 2004)",
+          "label": "Fabricated Pa. Superior Court bad faith case",
+          "replacement_citation": "Delgado v. Nationwide Insurance Company, 865 A.2d 498 (Pa. Super. 2004)",
           "difficulty": "medium"
         }
       ],
       "wrong_citation": [
         {
           "id": "cite_05_wc_1",
-          "label": "Wrong year (2006 instead of 2004)",
-          "replacement_citation": "Brown v. Progressive Insurance Company, 860 A. 2d 493 (Pa. Super. 2006)",
+          "label": "Transposed volume digits (680 instead of 860)",
+          "replacement_citation": "Brown v. Progressive Insurance Company, 680 A. 2d 493 (Pa. Super. 2004)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "cite_05_wc_2",
+          "label": "Wrong starting page (439 instead of 493)",
+          "replacement_citation": "Brown v. Progressive Insurance Company, 860 A. 2d 439 (Pa. Super. 2004)",
           "difficulty": "medium"
         }
       ],
@@ -194,7 +220,14 @@
     "case_name": "Johnson v. Progressive Ins. Co.",
     "original_display": "Johnson v. Progressive Ins. Co., 987 A. 2d 781 (Pa. Super. 2009)",
     "options": {
-      "fabricated_case": [],
+      "fabricated_case": [
+        {
+          "id": "cite_06_fab_1",
+          "label": "Fabricated Pa. Superior Court insurance case",
+          "replacement_citation": "Mitchell v. Geico Ins. Co., 991 A.2d 804 (Pa. Super. 2010)",
+          "difficulty": "medium"
+        }
+      ],
       "wrong_citation": [
         {
           "id": "cite_06_wc_1",
@@ -207,8 +240,8 @@
         {
           "id": "cite_06_mc_1",
           "label": "Fabricated 50% threshold for bad faith",
-          "original_text": "bad faith is not present merely because an insurer makes a low but reasonable estimate of an insured’s damages.",
-          "replacement_text": "an insurer's offer of less than 50% of the claim's established value creates a rebuttable presumption of bad faith.",
+          "original_text": "bad faith is not present merely because an insurer makes a low but reasonable estimate of an insured\u2019s damages.",
+          "replacement_text": "an insurer\u2019s offer of less than 50% of the claim\u2019s established value creates a rebuttable presumption of bad faith.",
           "difficulty": "hard"
         }
       ],
@@ -230,13 +263,7 @@
       "fabricated_case": [
         {
           "id": "cite_07_fab_1",
-          "label": "Wrong year (2003 instead of 2012)",
-          "replacement_citation": "Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 136 (3d. Cir. 2003)",
-          "difficulty": "medium"
-        },
-        {
-          "id": "cite_07_fab_2",
-          "label": "Entirely fabricated case",
+          "label": "Fabricated Third Circuit insurance case",
           "replacement_citation": "Sullivan v. State Farm Mut. Auto Ins. Co., 61 Fed. Appx. 227, 230 (3d Cir. 2012)",
           "difficulty": "medium"
         }
@@ -246,6 +273,12 @@
           "id": "cite_07_wc_1",
           "label": "Wrong pinpoint page (138 instead of 136)",
           "replacement_citation": "Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 138 (3d. Cir. 2012)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "cite_07_wc_2",
+          "label": "Wrong volume (65 instead of 56)",
+          "replacement_citation": "Smith v. State Farm Mut. Auto Ins. Co., 65 Fed. Appx. 133, 136 (3d. Cir. 2012)",
           "difficulty": "medium"
         }
       ],
@@ -260,31 +293,32 @@
       "fabricated_case": [
         {
           "id": "cite_08_fab_1",
-          "label": "Wrong defendant name (American General)",
-          "replacement_citation": "Rosenthal v. American General Ins. Co., 2019 U.S. Dist. LEXIS 50485, *14 (M.D. Pa. 2019)",
-          "difficulty": "medium"
-        },
-        {
-          "id": "cite_08_fab_2",
-          "label": "Wrong LEXIS number and district",
-          "replacement_citation": "Rosenthal v. Am. States Ins. Co., 2019 U.S. Dist. LEXIS 54082, *14 (E.D. Pa. 2019)",
+          "label": "Fabricated M.D. Pa. insurance bad faith case",
+          "replacement_citation": "Goldberg v. Am. Family Ins. Co., 2019 U.S. Dist. LEXIS 52718, *14 (M.D. Pa. 2019)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_08_wc_1",
+          "label": "Transposed LEXIS digits (50845 instead of 50485)",
+          "replacement_citation": "Rosenthal v. Am. States Ins. Co., 2019 U.S. Dist. LEXIS 50845, *14 (M.D. Pa. 2019)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [],
       "misquotation": []
     }
   },
   "cite_09": {
-    "case_name": "Moran v. United Servs. Auto. Ass’n",
-    "original_display": "Moran v. United Servs. Auto. Ass’n, 2019 U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019)",
+    "case_name": "Moran v. United Servs. Auto. Ass\u2019n",
+    "original_display": "Moran v. United Servs. Auto. Ass\u2019n, 2019 U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019)",
     "options": {
       "fabricated_case": [
         {
           "id": "cite_09_fab_1",
-          "label": "Wrong district (E.D. instead of M.D.)",
-          "replacement_citation": "Moran v. United Services Automobile Association, 2019 U.S. Dist. LEXIS 24080, *13 (E.D. Pa. 2019)",
+          "label": "Fabricated M.D. Pa. USAA insurance case",
+          "replacement_citation": "Fitzgerald v. United Servs. Auto. Ass\u2019n, 2019 U.S. Dist. LEXIS 26314, *9 (M.D. Pa. 2019)",
           "difficulty": "medium"
         }
       ],
@@ -292,7 +326,7 @@
         {
           "id": "cite_09_wc_1",
           "label": "Transposed LEXIS digits (24800 instead of 24080)",
-          "replacement_citation": "Moran v. United Servs. Auto. Ass'n, 2019 U.S. Dist. LEXIS 24800, *13 (M.D. Pa. 2019)",
+          "replacement_citation": "Moran v. United Servs. Auto. Ass\u2019n, 2019 U.S. Dist. LEXIS 24800, *13 (M.D. Pa. 2019)",
           "difficulty": "medium"
         }
       ],
@@ -307,18 +341,19 @@
       "fabricated_case": [
         {
           "id": "cite_10_fab_1",
-          "label": "Dropped letter from name (Clark instead of Clarke)",
-          "replacement_citation": "Clark v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 21507, *16 (M.D. Pa. 2019)",
-          "difficulty": "hard"
-        },
-        {
-          "id": "cite_10_fab_2",
-          "label": "Entirely fabricated case",
+          "label": "Fabricated M.D. Pa. Liberty Mutual case",
           "replacement_citation": "Collins v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 28914, *12 (M.D. Pa. 2019)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_10_wc_1",
+          "label": "Transposed LEXIS digits (21057 instead of 21507)",
+          "replacement_citation": "Clarke v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 21057, *16 (M.D. Pa. 2019)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [],
       "misquotation": []
     }
@@ -330,16 +365,22 @@
       "fabricated_case": [
         {
           "id": "cite_11_fab_1",
-          "label": "Wrong insurance company (Allstate)",
-          "replacement_citation": "McDonough v. Allstate Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19806, at *3 (E.D. Pa. 2019)",
+          "label": "Fabricated E.D. Pa. State Farm bad faith case",
+          "replacement_citation": "Brennan v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 22415, at *3 (E.D. Pa. 2019)",
           "difficulty": "medium"
         }
       ],
       "wrong_citation": [
         {
           "id": "cite_11_wc_1",
-          "label": "Wrong pinpoint page (*7 instead of *3)",
+          "label": "Wrong LEXIS pinpoint (*7 instead of *3)",
           "replacement_citation": "McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19806, at *7 (E.D. Pa. 2019)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "cite_11_wc_2",
+          "label": "Transposed LEXIS digits (19860 instead of 19806)",
+          "replacement_citation": "McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19860, at *3 (E.D. Pa. 2019)",
           "difficulty": "medium"
         }
       ],
@@ -347,7 +388,7 @@
         {
           "id": "cite_11_mc_1",
           "label": "Fabricated requirements (dollar amount, named individual)",
-          "original_text": "The plaintiff’s conclusory statements argued only that defendant had “unreasonably withheld payment of underinsured motorist benefits under the policy, failed to make a reasonable offer of settlement, . . . [and] failed to perform an adequate investigation of the value of his claim.”",
+          "original_text": "The plaintiff\u2019s conclusory statements argued only that defendant had \u201cunreasonably withheld payment of underinsured motorist benefits under the policy, failed to make a reasonable offer of settlement, . . . [and] failed to perform an adequate investigation of the value of his claim.\u201d",
           "replacement_text": "The court dismissed the bad faith claim, noting that plaintiff had failed to allege a specific dollar amount of damages or identify the individual adjuster responsible for the denial. These were the very type of bare-bones allegations that the Court found insufficient for purposes of stating a viable, statutory bad faith claim.",
           "difficulty": "hard"
         }
@@ -362,16 +403,16 @@
       "fabricated_case": [
         {
           "id": "cite_12_fab_1",
-          "label": "Misspelled party name (Kowalski instead of Kosmalski)",
-          "replacement_citation": "Kowalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124 (E.D. Pa. 2018)",
-          "difficulty": "hard"
+          "label": "Fabricated E.D. Pa. Progressive insurance case",
+          "replacement_citation": "Wojcik v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 78231, at *1 (E.D. Pa. 2018)",
+          "difficulty": "medium"
         }
       ],
       "wrong_citation": [
         {
           "id": "cite_12_wc_1",
-          "label": "Wrong pinpoint page (*8 instead of *1)",
-          "replacement_citation": "Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124, at *8 (E.D. Pa. 2018)",
+          "label": "Transposed LEXIS digits (74214 instead of 74124)",
+          "replacement_citation": "Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74214, at *1 (E.D. Pa. 2018)",
           "difficulty": "medium"
         }
       ],
@@ -394,18 +435,25 @@
       "fabricated_case": [
         {
           "id": "cite_13_fab_1",
-          "label": "Wrong insurer name (Nationwide)",
-          "replacement_citation": "Jones v. Nationwide Ins. Co., 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017)",
+          "label": "Fabricated E.D. Pa. insurer bad faith case",
+          "replacement_citation": "Torres v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 95812, at *1 (E.D. Pa. 2017)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_13_wc_1",
+          "label": "Transposed LEXIS digits (93763 instead of 93673)",
+          "replacement_citation": "Jones v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 93763, at *1 (E.D. Pa. 2017)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [
         {
           "id": "cite_13_mc_1",
           "label": "Fabricated 'industry guidelines' requirement",
-          "original_text": "Judge Pappert dismissed the bad faith claim, holding that plaintiff’s allegations were insufficient to “raise the claim to a level of plausibility required to survive a Rule 12(b)(6) motion to dismiss.",
-          "replacement_text": "Judge Pappert dismissed the bad faith claim, noting that the plaintiff had failed to allege that the insurer's conduct deviated from established industry claims-handling guidelines.",
+          "original_text": "Judge Pappert dismissed the bad faith claim, holding that plaintiff\u2019s allegations were insufficient to \u201craise the claim to a level of plausibility required to survive a Rule 12(b)(6) motion to dismiss.",
+          "replacement_text": "Judge Pappert dismissed the bad faith claim, noting that the plaintiff had failed to allege that the insurer\u2019s conduct deviated from established industry claims-handling guidelines.",
           "difficulty": "hard"
         },
         {
@@ -425,18 +473,19 @@
       "fabricated_case": [
         {
           "id": "cite_14_fab_1",
-          "label": "Wrong district (M.D. instead of E.D.)",
-          "replacement_citation": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159125, at *9-10 (M.D. Pa. 2015)",
-          "difficulty": "medium"
-        },
-        {
-          "id": "cite_14_fab_2",
-          "label": "Entirely fabricated case",
+          "label": "Fabricated E.D. Pa. Progressive insurance case",
           "replacement_citation": "Moretti v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 162408, at *6 (E.D. Pa. 2015)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_14_wc_1",
+          "label": "Transposed LEXIS digits (159215 instead of 159125)",
+          "replacement_citation": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159215, at *9-10 (E.D. Pa. 2015)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [],
       "misquotation": []
     }
@@ -448,13 +497,7 @@
       "fabricated_case": [
         {
           "id": "cite_15_fab_1",
-          "label": "Swapped entity name (Hartford Fire Ins. Co.)",
-          "replacement_citation": "Atiyeh v. Hartford Fire Ins. Co., 742 F. Supp. 2d 591 (E.D. Pa. 2010)",
-          "difficulty": "hard"
-        },
-        {
-          "id": "cite_15_fab_2",
-          "label": "Entirely fabricated case",
+          "label": "Fabricated E.D. Pa. Hartford insurance case",
           "replacement_citation": "Azimi v. National Fire Ins. Co. of Hartford, 748 F. Supp. 2d 612 (E.D. Pa. 2010)",
           "difficulty": "medium"
         }
@@ -462,8 +505,14 @@
       "wrong_citation": [
         {
           "id": "cite_15_wc_1",
-          "label": "Wrong year (2012 instead of 2010)",
-          "replacement_citation": "Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 591 (E.D. Pa. 2012)",
+          "label": "Transposed volume digits (724 instead of 742)",
+          "replacement_citation": "Atiyeh v. National Fire Ins. Co. of Hartford, 724 F. Supp. 2d 591 (E.D. Pa. 2010)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "cite_15_wc_2",
+          "label": "Wrong starting page (519 instead of 591)",
+          "replacement_citation": "Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 519 (E.D. Pa. 2010)",
           "difficulty": "medium"
         }
       ],
@@ -478,18 +527,19 @@
       "fabricated_case": [
         {
           "id": "cite_16_fab_1",
-          "label": "Wrong district (M.D. instead of E.D.)",
-          "replacement_citation": "Pasqualino v. State Farm Mut. Auto. Ins. Co., 2015 U.S. Dist. LEXIS 69318 (M.D. Pa. 2015)",
-          "difficulty": "medium"
-        },
-        {
-          "id": "cite_16_fab_2",
-          "label": "Wrong party name and LEXIS number",
+          "label": "Fabricated E.D. Pa. State Farm bad faith case",
           "replacement_citation": "Pasquarelli v. State Farm Mut. Auto. Ins. Co., 2015 U.S. Dist. LEXIS 71205 (E.D. Pa. 2015)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_16_wc_1",
+          "label": "Transposed LEXIS digits (69813 instead of 69318)",
+          "replacement_citation": "Pasqualino v. State Farm Mut. Auto. Ins. Co., 2015 U.S. Dist. LEXIS 69813 (E.D. Pa. 2015)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [],
       "misquotation": []
     }
@@ -501,7 +551,7 @@
       "fabricated_case": [
         {
           "id": "cite_17_fab_1",
-          "label": "Fabricated party name and numbers",
+          "label": "Fabricated M.D. Pa. insurance motion to strike case",
           "replacement_citation": "Zagorski v. Provident Life & Accident Ins. Co. of Am., 674 F. Supp. 2d 718 (M.D. Pa. 2009)",
           "difficulty": "medium"
         }
@@ -509,8 +559,14 @@
       "wrong_citation": [
         {
           "id": "cite_17_wc_1",
-          "label": "Wrong district (E.D. instead of M.D.)",
-          "replacement_citation": "Zaloga v. Provident Life & Accident Ins. Co. of Am., 671 F. Supp. 2d 623 (E.D. Pa. 2009)",
+          "label": "Transposed volume digits (617 instead of 671)",
+          "replacement_citation": "Zaloga v. Provident Life & Accident Ins. Co. of Am., 617 F. Supp. 2d 623 (M.D. Pa. 2009)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "cite_17_wc_2",
+          "label": "Wrong starting page (632 instead of 623)",
+          "replacement_citation": "Zaloga v. Provident Life & Accident Ins. Co. of Am., 671 F. Supp. 2d 632 (M.D. Pa. 2009)",
           "difficulty": "medium"
         }
       ],
@@ -518,7 +574,7 @@
         {
           "id": "cite_17_mc_1",
           "label": "Overstated burden — 'disfavored' and 'substantial prejudice'",
-          "original_text": "A decision to grant or deny a motion to strike a pleading, or any part of it, is vested in the trial court’s discretion.",
+          "original_text": "A decision to grant or deny a motion to strike a pleading, or any part of it, is vested in the trial court\u2019s discretion.",
           "replacement_text": "Motions to strike are disfavored and should only be granted when the moving party demonstrates substantial prejudice.",
           "difficulty": "hard"
         }
@@ -533,18 +589,19 @@
       "fabricated_case": [
         {
           "id": "cite_18_fab_1",
-          "label": "Wrong district (E.D. instead of M.D.)",
-          "replacement_citation": "Lane v. McLean, 2018 U.S. Dist. LEXIS 54033 (E.D. Pa. 2018)",
-          "difficulty": "medium"
-        },
-        {
-          "id": "cite_18_fab_2",
-          "label": "Misspelled name and wrong LEXIS number",
-          "replacement_citation": "Lane v. MacLean, 2018 U.S. Dist. LEXIS 58217 (M.D. Pa. 2018)",
+          "label": "Fabricated M.D. Pa. motion to strike case",
+          "replacement_citation": "Porter v. Henderson, 2018 U.S. Dist. LEXIS 57219 (M.D. Pa. 2018)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_18_wc_1",
+          "label": "Transposed LEXIS digits (54303 instead of 54033)",
+          "replacement_citation": "Lane v. McLean, 2018 U.S. Dist. LEXIS 54303 (M.D. Pa. 2018)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [
         {
           "id": "cite_18_mc_1",
@@ -564,8 +621,8 @@
       "fabricated_case": [
         {
           "id": "cite_19_fab_1",
-          "label": "Changed defendant and added LEXIS number",
-          "replacement_citation": "Hoffer v. Grane Healthcare Co., 2014 U.S. Dist. LEXIS 87432 (M.D. Pa. 2014)",
+          "label": "Fabricated E.D. Mich. habeas case",
+          "replacement_citation": "Reeves v. Stoddard, No. 2:14-CV-10977, 2019 U.S. Dist. LEXIS 27435, at *1 (E.D. Mich. Feb. 21, 2019)",
           "difficulty": "medium"
         }
       ],
@@ -589,17 +646,24 @@
       "fabricated_case": [
         {
           "id": "cite_20_fab_1",
-          "label": "Wrong insurer (Nationwide)",
-          "replacement_citation": "Stepanovich v. Nationwide Ins. Co., No. 1239 WDA 2012 (Pa. Super. October 15, 2013)",
+          "label": "Fabricated Pa. Superior Court UIM case",
+          "replacement_citation": "Braddock v. Erie Ins. Exchange, No. 1184 WDA 2012 (Pa. Super. October 15, 2013)",
           "difficulty": "medium"
         }
       ],
-      "wrong_citation": [],
+      "wrong_citation": [
+        {
+          "id": "cite_20_wc_1",
+          "label": "Wrong docket number (1293 instead of 1239)",
+          "replacement_citation": "Stepanovich v. State Farm, No. 1293 WDA, 2013 No. 1296 WDA 2012 (Pa. Super. October 15, 2013)",
+          "difficulty": "medium"
+        }
+      ],
       "mischaracterization": [
         {
           "id": "cite_20_mc_1",
           "label": "Fabricated 'exhaustion of appeals' requirement",
-          "original_text": "the contract is not technically breached until there has been a determination of liability and an award of damages in excess of the tortfeasor’s liability limits.",
+          "original_text": "the contract is not technically breached until there has been a determination of liability and an award of damages in excess of the tortfeasor\u2019s liability limits.",
           "replacement_text": "the contract is not technically breached until there has been a determination of liability, an award of damages, and exhaustion of all available appellate remedies.",
           "difficulty": "hard"
         }
@@ -608,7 +672,7 @@
         {
           "id": "cite_20_mq_1",
           "label": "Added 'arbitration' concept not in original",
-          "original_text": "the contract is not technically breached until there has been a determination of liability and an award of damages in excess of the tortfeasor’s liability limits.",
+          "original_text": "the contract is not technically breached until there has been a determination of liability and an award of damages in excess of the tortfeasor\u2019s liability limits.",
           "replacement_text": "the contract is not breached until damages have been conclusively established through litigation or arbitration.",
           "difficulty": "hard"
         }
@@ -622,16 +686,16 @@
       "fabricated_case": [
         {
           "id": "cite_21_fab_1",
-          "label": "Shortened hyphenated name (dropped '-Roy')",
-          "replacement_citation": "Schwendinger v. State Farm Mut. Auto. Ins. Co., No. 11-CIV-445 (W.D. Pa. July 10, 2012)",
-          "difficulty": "hard"
+          "label": "Fabricated W.D. Pa. UIM claims handling case",
+          "replacement_citation": "Pennington v. State Farm Mut. Auto. Ins. Co., No. 11-CIV-612 (W.D. Pa. August 3, 2012)",
+          "difficulty": "medium"
         }
       ],
       "wrong_citation": [
         {
           "id": "cite_21_wc_1",
-          "label": "Wrong district (E.D. instead of W.D.)",
-          "replacement_citation": "Schwendinger-Roy v. State Farm Mut. Auto. Ins. Co., No. 11-CIV-445 (E.D. Pa. July 10, 2012)",
+          "label": "Wrong docket number (454 instead of 445)",
+          "replacement_citation": "Schwendinger-Roy v. State Farm Mut. Auto. Ins. Co., No. 11-CIV-454 (W.D. Pa. July 10, 2012)",
           "difficulty": "medium"
         }
       ],
@@ -653,16 +717,16 @@
       "fabricated_case": [
         {
           "id": "cite_22_fab_1",
-          "label": "Extra letter in name (Tillett with double-t)",
-          "replacement_citation": "Moninghoff v. Tillett, 2012 U.S. Dist. LEXIS 190896 (E.D. Pa. June 27, 2012)",
-          "difficulty": "hard"
+          "label": "Fabricated E.D. Pa. UIM/bad faith separation case",
+          "replacement_citation": "Brinkerhoff v. Garrett, 2012 U.S. Dist. LEXIS 194217 (E.D. Pa. July 12, 2012)",
+          "difficulty": "medium"
         }
       ],
       "wrong_citation": [
         {
           "id": "cite_22_wc_1",
-          "label": "Wrong district (M.D. instead of E.D.)",
-          "replacement_citation": "Moninghoff v. Tillet, 2012 U.S. Dist. LEXIS 190896 (M.D. Pa. June 27, 2012)",
+          "label": "Transposed LEXIS digits (190986 instead of 190896)",
+          "replacement_citation": "Moninghoff v. Tillet, 2012 U.S. Dist. LEXIS 190986 (E.D. Pa. June 27, 2012)",
           "difficulty": "medium"
         }
       ],
@@ -682,12 +746,25 @@
     "case_name": "Wagner v. State Farm Mut. Auto. Ins. Co.",
     "original_display": "Wagner v. State Farm Mut. Auto. Ins. Co., 2014 U.S. Dist. LEXIS 194554 (E.D. Pa. Feb. 20, 2014)",
     "options": {
-      "fabricated_case": [],
+      "fabricated_case": [
+        {
+          "id": "cite_23_fab_1",
+          "label": "Fabricated E.D. Pa. UIM discovery case",
+          "replacement_citation": "Hoffman v. State Farm Mut. Auto. Ins. Co., 2014 U.S. Dist. LEXIS 198312 (E.D. Pa. March 5, 2014)",
+          "difficulty": "medium"
+        }
+      ],
       "wrong_citation": [
         {
           "id": "cite_23_wc_1",
-          "label": "Wrong year (2015 instead of 2014)",
-          "replacement_citation": "Wagner v. State Farm Mut. Auto. Ins. Co., 2014 U.S. Dist. LEXIS 194554 (E.D. Pa. Feb. 20, 2015)",
+          "label": "Wrong LEXIS year (2013 instead of 2014)",
+          "replacement_citation": "Wagner v. State Farm Mut. Auto. Ins. Co., 2013 U.S. Dist. LEXIS 194554 (E.D. Pa. Feb. 20, 2014)",
+          "difficulty": "medium"
+        },
+        {
+          "id": "cite_23_wc_2",
+          "label": "Transposed LEXIS digits (194455 instead of 194554)",
+          "replacement_citation": "Wagner v. State Farm Mut. Auto. Ins. Co., 2014 U.S. Dist. LEXIS 194455 (E.D. Pa. Feb. 20, 2014)",
           "difficulty": "medium"
         }
       ],

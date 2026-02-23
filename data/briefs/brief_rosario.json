@@ -192,7 +192,15 @@
       "section": "III.A.2",
       "type": "body",
       "text": "In the instant matter, Plaintiff has failed to meet the pleading requirements of Federal Rule of Civil Procedure 8, with respect to Count II of her Complaint, requiring dismissal of that count with prejudice. Plaintiff has not included a short and plain statement, or any factual statement, sufficient to support a bad faith claim against Defendant. Plaintiff has not pled facts sufficient to establish that, if proven, she would be entitled to relief. What Plaintiff has included is a pro forma litany of the very unadorned, “defendant-unlawfully-harmed-me accusations” that the Supreme Court rejected in Ashcroft, supra. In particular, Plaintiff has alleged in boilerplate and conclusory fashion:",
-      "citations": []
+      "citations": [
+        {
+          "citation_id": "cite_02",
+          "start": 606,
+          "end": 621,
+          "display_text": "Ashcroft, supra",
+          "supra": true
+        }
+      ]
     },
     {
       "id": "para_complaint_quote",
@@ -330,14 +338,30 @@
       "section": "III.A.2",
       "type": "body",
       "text": "In McDonough v. State Farm Fire & Cas. Co., supra., the court also dismissed plaintiff’s statutory bad faith claim. The court found that plaintiff had failed to state a plausible bad faith claim because he had not alleged any factual content indicating that State Farm lacked a reasonable basis for its decision, or that it knew or recklessly disregarded a lack of a reasonable basis. The plaintiff’s conclusory statements argued only that defendant had “unreasonably withheld payment of underinsured motorist benefits under the policy, failed to make a reasonable offer of settlement, . . . [and] failed to perform an adequate investigation of the value of his claim.” These were the very type of bare-bones allegations that the Court found insufficient for purposes of stating a viable, statutory bad faith claim.",
-      "citations": []
+      "citations": [
+        {
+          "citation_id": "cite_11",
+          "start": 3,
+          "end": 49,
+          "display_text": "McDonough v. State Farm Fire & Cas. Co., supra",
+          "supra": true
+        }
+      ]
     },
     {
       "id": "para_kiessling_detail",
       "section": "III.A.2",
       "type": "body",
       "text": "In Kiessling v. State Farm Mut. Auto Ins. Co., supra., this Court noted that bad faith claims are fact specific, and that in order to survive a motion to dismiss, a plaintiff must plead specific facts. 2019 U.S. Dist. LEXIS 24085, at *8 (E.D. Pa. 2019). A plaintiff cannot merely say that an insurer acted unfairly, but must specify what acts were unfair. Id. But allegations that, at their core, say no more than “insurer negotiated unfairly because it negotiated unfairly,” or “insurer acted in bad faith by acting in bad faith,” fall far short of meeting that critical pleading threshold.",
-      "citations": []
+      "citations": [
+        {
+          "citation_id": "cite_04",
+          "start": 3,
+          "end": 52,
+          "display_text": "Kiessling v. State Farm Mut. Auto Ins. Co., supra",
+          "supra": true
+        }
+      ]
     },
     {
       "id": "para_kosmalski_pasqualino",
@@ -516,7 +540,15 @@
       "section": "III.B.2",
       "type": "body",
       "text": "In Wagner v. State Farm, supra, the court was asked to address whether information relating to claim handling was relevant to a breach of contract claim to recover UIM benefits. The question arose in the context of the insured’s motion to compel the deposition of the claim adjuster, but the issues and rationale used by the court to resolve them are applicable here as well. The court precluded the deposition and held, in part:",
-      "citations": []
+      "citations": [
+        {
+          "citation_id": "cite_23",
+          "start": 3,
+          "end": 30,
+          "display_text": "Wagner v. State Farm, supra",
+          "supra": true
+        }
+      ]
     },
     {
       "id": "para_wagner_quote",
@@ -530,14 +562,30 @@
       "section": "III.B.2",
       "type": "body",
       "text": "In Schwendinger-Roy v. State Farm, supra, the plaintiff filed suit for UIM benefits – a contract claim like the one at issue here. State Farm filed a motion in limine to preclude evidence regarding its alleged breach of the insurance contract and improper claims handling. The Court granted the motion and precluded evidence regarding State Farm’s handling of the claim as well as its alleged breach of the insurance contract. Further, the Court explained that the probative value of revealing State Farm’s settlement offer, the amount of available UIM coverage and the amount of the third party settlement were outweighed by the potential for confusing the issues and misleading the jury. It is that same potential for confusion that merits the granting of the instant motion here.",
-      "citations": []
+      "citations": [
+        {
+          "citation_id": "cite_21",
+          "start": 3,
+          "end": 40,
+          "display_text": "Schwendinger-Roy v. State Farm, supra",
+          "supra": true
+        }
+      ]
     },
     {
       "id": "para_moninghoff_intro",
       "section": "III.B.2",
       "type": "body",
       "text": "In Moninghoff v. Tillet, supra, the Court discussed important distinctions between a UIM claim, requiring an assessment of liability and damages, as compared to an alleged bad faith claim, implicating the insurer’s conduct. The Court held (emphasis added):",
-      "citations": []
+      "citations": [
+        {
+          "citation_id": "cite_22",
+          "start": 3,
+          "end": 30,
+          "display_text": "Moninghoff v. Tillet, supra",
+          "supra": true
+        }
+      ]
     },
     {
       "id": "para_moninghoff_quote",

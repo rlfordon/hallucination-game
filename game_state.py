@@ -3,6 +3,7 @@
 import json
 import os
 import copy
+import random
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 
@@ -49,6 +50,67 @@ def list_briefs():
     return briefs
 
 
+def generate_random_swaps(brief_id, num_swaps):
+    """Generate a balanced set of random swaps across hallucination types.
+
+    Args:
+        brief_id: The brief to generate swaps for
+        num_swaps: Number of swaps to generate
+
+    Returns:
+        List of {citation_id, hallucination_type, option_id} dicts
+    """
+    hallucinations = load_hallucinations(brief_id)
+
+    # Build pool grouped by hallucination type
+    TYPES = ['fabricated_case', 'wrong_citation', 'mischaracterization', 'misquotation']
+    pools = {t: [] for t in TYPES}
+
+    for cid, cite_data in hallucinations.items():
+        options = cite_data.get('options', {})
+        for htype in TYPES:
+            type_options = options.get(htype, [])
+            for opt in type_options:
+                pools[htype].append((cid, htype, opt['id']))
+
+    # Shuffle each pool
+    for t in TYPES:
+        random.shuffle(pools[t])
+
+    # Round-robin pick from each type
+    swaps = []
+    used_cids = set()
+    type_idx = {t: 0 for t in TYPES}
+    type_cycle = 0
+
+    while len(swaps) < num_swaps:
+        htype = TYPES[type_cycle % len(TYPES)]
+        pool = pools[htype]
+
+        # Find next unused citation in this type's pool
+        found = False
+        while type_idx[htype] < len(pool):
+            cid, ht, oid = pool[type_idx[htype]]
+            type_idx[htype] += 1
+            if cid not in used_cids:
+                swaps.append({
+                    'citation_id': cid,
+                    'hallucination_type': ht,
+                    'option_id': oid
+                })
+                used_cids.add(cid)
+                found = True
+                break
+
+        type_cycle += 1
+
+        # If we've cycled through all types without finding anything, break
+        if not found and all(type_idx[t] >= len(pools[t]) for t in TYPES):
+            break
+
+    return swaps
+
+
 def get_brief_for_display(brief_id, swaps=None):
     """Get brief data suitable for display, optionally with swaps applied.
 
@@ -86,6 +148,7 @@ def get_brief_for_display(brief_id, swaps=None):
             }
 
     # Apply swaps to paragraphs
+    # First pass: citation text replacements (within the citation's own paragraph)
     for para in modified['paragraphs']:
         if not para.get('citations'):
             continue
@@ -102,7 +165,9 @@ def get_brief_for_display(brief_id, swaps=None):
             option = swap_info['option']
 
             if 'replacement_citation' in option:
-                # Simple citation text replacement
+                # Simple citation text replacement — only on the primary (non-supra) citation
+                if cite.get('supra'):
+                    continue
                 old_text = cite['display_text']
                 new_text = option['replacement_citation']
                 text = para['text']
@@ -113,15 +178,23 @@ def get_brief_for_display(brief_id, swaps=None):
                 cite['display_text'] = new_text
                 cite['end'] = start + len(new_text)
 
-            elif 'replacement_text' in option and 'original_text' in option:
-                # Text region replacement (mischaracterization/misquotation)
-                old_text = option['original_text']
-                new_text = option['replacement_text']
-                idx = para['text'].find(old_text)
-                if idx >= 0:
-                    para['text'] = para['text'][:idx] + new_text + para['text'][idx + len(old_text):]
-                    # Recalculate citation offsets in this paragraph
-                    _recalculate_offsets(para)
+    # Second pass: text region replacements (search all paragraphs)
+    applied_swaps = set()
+    for cid, swap_info in swap_lookup.items():
+        option = swap_info['option']
+        if 'replacement_text' not in option or 'original_text' not in option:
+            continue
+
+        old_text = option['original_text']
+        new_text = option['replacement_text']
+
+        for para in modified['paragraphs']:
+            idx = para['text'].find(old_text)
+            if idx >= 0:
+                para['text'] = para['text'][:idx] + new_text + para['text'][idx + len(old_text):]
+                _recalculate_offsets(para)
+                applied_swaps.add(cid)
+                break
 
     return modified
 

@@ -77,7 +77,7 @@ async function pollPhase() {
                 `<span class="team-badge">${phase.team_name}</span>`;
         }
 
-        if (phase.phase === 'fabrication') {
+        if (phase.phase !== 'lobby') {
             clearInterval(pollInterval);
             window.location.href = `/game/${API.gameId}`;
         }

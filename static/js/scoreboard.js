@@ -47,6 +47,7 @@ async function init() {
     renderScores(data.scores);
     renderTypeStats(data.type_stats);
     renderDetails(data.scores);
+    initAnnotatedBriefSection(data.scores);
 }
 
 function renderScores(scores) {
@@ -162,6 +163,66 @@ function renderDetails(scores) {
     }
 
     container.innerHTML = html;
+}
+
+// ── Annotated Brief Review ──────────────────────────────────────────
+
+let abBriefData = null;
+let abAnnotations = null;
+
+function initAnnotatedBriefSection(scores) {
+    const section = document.getElementById('annotatedBriefSection');
+    if (!section) return;
+
+    const select = document.getElementById('briefTeamSelect');
+    const teams = Object.entries(scores);
+    if (teams.length === 0) return;
+
+    select.innerHTML = '<option value="">Choose a team...</option>' +
+        teams.map(([tid, t]) => `<option value="${tid}">${t.team_name}</option>`).join('');
+
+    section.style.display = '';
+}
+
+async function loadAnnotatedBrief() {
+    const teamId = document.getElementById('briefTeamSelect').value;
+    const container = document.getElementById('annotatedBriefContainer');
+    if (!teamId) {
+        container.classList.add('hidden');
+        return;
+    }
+
+    const data = await ReviewBrief.loadReviewBrief(teamId, API.headers());
+    if (data.error) {
+        container.classList.remove('hidden');
+        document.getElementById('annotatedBriefText').textContent = 'Error: ' + data.error;
+        return;
+    }
+
+    abBriefData = data.brief;
+    abAnnotations = data.annotations;
+
+    // Show team info
+    const info = document.getElementById('briefTeamInfo');
+    let infoText = `Fabricated by: ${data.fab_team_name}`;
+    if (data.ver_team_name) infoText += ` | Verified by: ${data.ver_team_name}`;
+    info.textContent = infoText;
+
+    ReviewBrief.setClickCallback(function (citationId) {
+        ReviewBrief.renderAnnotationPanel(
+            document.getElementById('annotationPanel'),
+            citationId, abAnnotations, abBriefData, true
+        );
+    });
+
+    container.classList.remove('hidden');
+    ReviewBrief.renderAnnotatedBrief(
+        document.getElementById('annotatedBriefText'),
+        abBriefData, abAnnotations,
+        true
+    );
+    document.getElementById('annotationPanel').innerHTML =
+        '<div class="empty-state">Select a highlighted citation to see details</div>';
 }
 
 document.addEventListener('DOMContentLoaded', init);

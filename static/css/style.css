@@ -204,6 +204,15 @@ body {
     border-bottom-color: var(--green);
 }
 
+/* ── Annotated Brief: Type-colored citation highlights ────────────── */
+.citation.type-fab { background: #ede9fe; border-bottom-color: #7c3aed; }
+.citation.type-wc  { background: #dbeafe; border-bottom-color: #2563eb; }
+.citation.type-mc  { background: #fef3c7; border-bottom-color: #d97706; }
+.citation.type-mq  { background: #fce7f3; border-bottom-color: #db2777; }
+
+.citation.was-caught { border-bottom: 2.5px solid var(--green); }
+.citation.was-missed { border-bottom: 2.5px solid var(--red); }
+
 /* ── Side Panel ───────────────────────────────────────────────────────── */
 .side-panel {
     background: white;
