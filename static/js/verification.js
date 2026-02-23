@@ -1,31 +1,10 @@
 /* verification.js — Phase 2: Flag citations as real or fake */
-
-const API = {
-    token: localStorage.getItem('session_token'),
-    gameId: localStorage.getItem('game_id'),
-
-    headers() {
-        const h = { 'Content-Type': 'application/json' };
-        if (this.token) h['X-Session-Token'] = this.token;
-        return h;
-    },
-
-    async post(url, data) {
-        const res = await fetch(url, { method: 'POST', headers: this.headers(), body: JSON.stringify(data) });
-        return res.json();
-    },
-
-    async get(url) {
-        const res = await fetch(url, { headers: this.headers() });
-        return res.json();
-    }
-};
+/* Depends on: common.js (API, escapeHtml, Timer) */
 
 let briefData = null;
 let currentFlags = {};  // citation_id -> verdict
 let allCitationIds = [];
 let selectedCitation = null;
-let timerEnd = null;
 
 async function init() {
     const data = await API.get('/api/brief');
@@ -36,10 +15,14 @@ async function init() {
 
     briefData = data.brief;
 
-    // Collect all citation IDs
+    // Collect unique citation IDs (supra refs share IDs with their primary)
+    const seen = new Set();
     for (const para of briefData.paragraphs) {
         for (const cite of (para.citations || [])) {
-            allCitationIds.push(cite.citation_id);
+            if (!seen.has(cite.citation_id)) {
+                seen.add(cite.citation_id);
+                allCitationIds.push(cite.citation_id);
+            }
         }
     }
 
@@ -97,12 +80,6 @@ function renderParagraphWithCitations(para) {
 
     html += escapeHtml(text.slice(lastEnd));
     return html;
-}
-
-function escapeHtml(text) {
-    const div = document.createElement('div');
-    div.textContent = text;
-    return div.innerHTML;
 }
 
 function selectCitation(citationId) {
@@ -181,28 +158,14 @@ function updateReviewCount() {
 // ── Timer & Polling ─────────────────────────────────────────────────────
 
 function startTimer() {
-    setInterval(updateTimer, 1000);
-}
-
-function updateTimer() {
-    const el = document.getElementById('timerDisplay');
-    if (!timerEnd) return;
-
-    const now = new Date();
-    const end = new Date(timerEnd);
-    const diff = Math.max(0, Math.floor((end - now) / 1000));
-
-    const mins = Math.floor(diff / 60);
-    const secs = diff % 60;
-    el.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
-    el.classList.toggle('warning', diff < 60);
+    Timer.init('#timerDisplay');
 }
 
 function startPolling() {
     setInterval(async () => {
         try {
             const data = await API.get('/api/game/phase');
-            timerEnd = data.timer_end;
+            Timer.setEnd(data.timer_end);
 
             if (data.team_name) {
                 document.getElementById('teamBadge').textContent = data.team_name;
@@ -215,7 +178,7 @@ function startPolling() {
     }, 2500);
 
     API.get('/api/game/phase').then(data => {
-        timerEnd = data.timer_end;
+        Timer.setEnd(data.timer_end);
         if (data.team_name) {
             document.getElementById('teamBadge').textContent = data.team_name;
         }

@@ -8,6 +8,11 @@ import game_state as gs
 app = Flask(__name__)
 
 
+@app.teardown_appcontext
+def shutdown_db(exception=None):
+    db.close_db()
+
+
 # ── Helpers ──────────────────────────────────────────────────────────────────
 
 def get_player():
@@ -103,7 +108,7 @@ def api_create_game():
 @app.route('/api/game/assign-teams', methods=['POST'])
 def api_assign_teams():
     """Assign a player to a team."""
-    player, err, code = require_player()
+    player, err, code = require_professor()
     if err:
         return err, code
 
@@ -140,7 +145,6 @@ def api_start_game():
 
     # Rotation: Team i fabricates, Team (i+1) % n verifies Team i's work
     for i, team in enumerate(team_list):
-        next_team = team_list[(i + 1) % len(team_list)]
         db.set_team_briefs(
             team['team_id'],
             fabrication_brief=game['brief_id'],

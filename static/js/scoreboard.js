@@ -1,20 +1,5 @@
 /* scoreboard.js — Phase 3: Results & scores */
-
-const API = {
-    token: localStorage.getItem('session_token') || localStorage.getItem('prof_session_token'),
-    gameId: localStorage.getItem('game_id') || localStorage.getItem('prof_game_id'),
-
-    headers() {
-        const h = { 'Content-Type': 'application/json' };
-        if (this.token) h['X-Session-Token'] = this.token;
-        return h;
-    },
-
-    async get(url) {
-        const res = await fetch(url, { headers: this.headers() });
-        return res.json();
-    }
-};
+/* Depends on: common.js (API, escapeHtml), review-brief.js (ReviewBrief) */
 
 const TYPE_LABELS = {
     fabricated_case: 'Fabricated Case',

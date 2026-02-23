@@ -74,28 +74,9 @@
 {% endblock %}
 
 {% block scripts %}
+<script src="{{ url_for('static', filename='js/common.js') }}"></script>
 <script src="{{ url_for('static', filename='js/review-brief.js') }}"></script>
 <script>
-const API = {
-    token: localStorage.getItem('prof_session_token'),
-    gameId: localStorage.getItem('prof_game_id'),
-
-    headers() {
-        const h = { 'Content-Type': 'application/json' };
-        if (this.token) h['X-Session-Token'] = this.token;
-        return h;
-    },
-
-    async post(url, data) {
-        const res = await fetch(url, { method: 'POST', headers: this.headers(), body: JSON.stringify(data) });
-        return res.json();
-    },
-
-    async get(url) {
-        const res = await fetch(url, { headers: this.headers() });
-        return res.json();
-    }
-};
 
 let currentPhase = 'lobby';
 let timerEnd = null;
@@ -154,9 +135,9 @@ function renderTeams(teams, unassigned) {
     const container = document.getElementById('teamsList');
     container.innerHTML = teams.map(team => `
         <div class="team-card" style="margin-bottom: 0.75rem;">
-            <h4>${team.team_name} (${team.players.length})</h4>
+            <h4>${escapeHtml(team.team_name)} (${team.players.length})</h4>
             <ul class="player-list">
-                ${team.players.map(p => `<li>${p.player_name}</li>`).join('')}
+                ${team.players.map(p => `<li>${escapeHtml(p.player_name)}</li>`).join('')}
             </ul>
         </div>
     `).join('');
@@ -167,10 +148,10 @@ function renderTeams(teams, unassigned) {
             <h4 style="font-size: 0.8125rem; color: var(--gray-500); margin-bottom: 0.5rem;">Unassigned</h4>
             ${unassigned.map(p => `
                 <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.375rem;">
-                    <span style="font-size: 0.8125rem;">${p.player_name}</span>
+                    <span style="font-size: 0.8125rem;">${escapeHtml(p.player_name)}</span>
                     <select onchange="assignPlayer('${p.player_id}', this.value)" style="width: auto; padding: 0.25rem 0.5rem; font-size: 0.75rem;">
                         <option value="">Assign to...</option>
-                        ${teams.map(t => `<option value="${t.team_id}">${t.team_name}</option>`).join('')}
+                        ${teams.map(t => `<option value="${t.team_id}">${escapeHtml(t.team_name)}</option>`).join('')}
                     </select>
                 </div>
             `).join('')}

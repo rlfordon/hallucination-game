@@ -131,9 +131,9 @@ def get_brief_for_display(brief_id, swaps=None):
     # Build swap lookup: citation_id -> option details
     swap_lookup = {}
     for swap in swaps:
-        cid = swap['citation_id'] if isinstance(swap, dict) else swap['citation_id']
-        htype = swap['hallucination_type'] if isinstance(swap, dict) else swap['hallucination_type']
-        oid = swap['option_id'] if isinstance(swap, dict) else swap['option_id']
+        cid = swap['citation_id']
+        htype = swap['hallucination_type']
+        oid = swap['option_id']
 
         cite_data = hallucinations.get(cid)
         if not cite_data:
@@ -235,42 +235,36 @@ def compute_scores(game_id, teams, swaps_by_team, flags_by_team, brief_id):
     results = {}
 
     for team in teams:
-        tid = team['team_id'] if isinstance(team, dict) else team['team_id']
-        tname = team['team_name'] if isinstance(team, dict) else team['team_name']
-        fab_team = team.get('fabrication_team') if isinstance(team, dict) else team.get('fabrication_team')
+        tid = team['team_id']
+        tname = team['team_name']
+        fab_team = team.get('fabrication_team')
 
         # Get this team's swaps (what they fabricated)
         team_swaps = swaps_by_team.get(tid, [])
-        swapped_cids = {s['citation_id'] if isinstance(s, dict) else s['citation_id'] for s in team_swaps}
+        swapped_cids = {s['citation_id'] for s in team_swaps}
 
         # Get this team's flags (what they flagged during verification)
         team_flags = flags_by_team.get(tid, [])
         flag_lookup = {}
         for f in team_flags:
-            cid = f['citation_id'] if isinstance(f, dict) else f['citation_id']
-            verdict = f['verdict'] if isinstance(f, dict) else f['verdict']
-            flag_lookup[cid] = verdict
+            flag_lookup[f['citation_id']] = f['verdict']
 
         # Find the team that verified this team's fabrications
         verifying_flags = {}
         for other_team in teams:
-            otid = other_team['team_id'] if isinstance(other_team, dict) else other_team['team_id']
-            other_fab_team = other_team.get('fabrication_team') if isinstance(other_team, dict) else other_team.get('fabrication_team')
-            if other_fab_team == tid:
+            if other_team.get('fabrication_team') == tid:
                 # This other team verified our fabrications
-                other_flags = flags_by_team.get(otid, [])
+                other_flags = flags_by_team.get(other_team['team_id'], [])
                 for f in other_flags:
-                    cid = f['citation_id'] if isinstance(f, dict) else f['citation_id']
-                    verdict = f['verdict'] if isinstance(f, dict) else f['verdict']
-                    verifying_flags[cid] = verdict
+                    verifying_flags[f['citation_id']] = f['verdict']
 
         # Fabrication scoring: +2 undetected, +0 caught
         fab_score = 0
         fab_details = []
         for s in team_swaps:
-            cid = s['citation_id'] if isinstance(s, dict) else s['citation_id']
-            htype = s['hallucination_type'] if isinstance(s, dict) else s['hallucination_type']
-            oid = s['option_id'] if isinstance(s, dict) else s['option_id']
+            cid = s['citation_id']
+            htype = s['hallucination_type']
+            oid = s['option_id']
             verifier_verdict = verifying_flags.get(cid, 'skip')
             caught = verifier_verdict == 'fake'
             points = 0 if caught else 2
@@ -297,9 +291,8 @@ def compute_scores(game_id, teams, swaps_by_team, flags_by_team, brief_id):
         ver_details = []
 
         # We need to know which citations were swapped by the team we're verifying
-        # That's the fab_team
         fab_team_swaps = swaps_by_team.get(fab_team, []) if fab_team else []
-        fab_team_swapped_cids = {s['citation_id'] if isinstance(s, dict) else s['citation_id'] for s in fab_team_swaps}
+        fab_team_swapped_cids = {s['citation_id'] for s in fab_team_swaps}
 
         for cid in sorted(all_citation_ids):
             verdict = flag_lookup.get(cid, 'skip')
@@ -331,9 +324,7 @@ def compute_scores(game_id, teams, swaps_by_team, flags_by_team, brief_id):
             'fabrication_details': fab_details,
             'verification_details': ver_details,
             'swaps_made': len(team_swaps),
-            'flags_made': len([f for f in team_flags if flag_lookup.get(
-                f['citation_id'] if isinstance(f, dict) else f['citation_id']
-            ) == 'fake'])
+            'flags_made': len([f for f in team_flags if flag_lookup.get(f['citation_id']) == 'fake'])
         }
 
     return results

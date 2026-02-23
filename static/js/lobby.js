@@ -1,25 +1,5 @@
 /* lobby.js — Join game and wait for start */
-
-const API = {
-    token: localStorage.getItem('session_token'),
-    gameId: localStorage.getItem('game_id'),
-
-    headers() {
-        const h = { 'Content-Type': 'application/json' };
-        if (this.token) h['X-Session-Token'] = this.token;
-        return h;
-    },
-
-    async post(url, data) {
-        const res = await fetch(url, { method: 'POST', headers: this.headers(), body: JSON.stringify(data) });
-        return res.json();
-    },
-
-    async get(url) {
-        const res = await fetch(url, { headers: this.headers() });
-        return res.json();
-    }
-};
+/* Depends on: common.js (API, escapeHtml) */
 
 async function joinGame() {
     const code = document.getElementById('gameCode').value.trim().toUpperCase();
@@ -96,9 +76,9 @@ function renderTeams(teams) {
     const container = document.getElementById('teamList');
     container.innerHTML = teams.map(team => `
         <div class="team-card">
-            <h4>${team.team_name}</h4>
+            <h4>${escapeHtml(team.team_name)}</h4>
             <ul class="player-list">
-                ${team.players.map(p => `<li>${p.player_name}</li>`).join('')}
+                ${team.players.map(p => `<li>${escapeHtml(p.player_name)}</li>`).join('')}
                 ${team.players.length === 0 ? '<li style="color: var(--gray-400)">No players yet</li>' : ''}
             </ul>
         </div>
