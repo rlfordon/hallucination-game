@@ -1,0 +1,809 @@
+      Case 2:26-cv-00276-MAK           Document 12-1         Filed 01/26/26       Page 1 of 15
+
+
+
+
+                 IN THE UNITED STATES DISTRICT COURT
+              FOR THE EASTERN DISTRICT OF PENNSYLVANIA
+                                    :
+NYDIA ROSARIO                       : CIVIL ACTION
+                   Plaintiff        :
+                                    :
+v.                                  :
+                                    : 2:26-cv-00276-MAK
+LIBERTY MUTUAL PERSONAL INSURANCE :
+COMPANY                             :
+                                    :
+                  Defendant         :
+
+  BRIEF IN SUPPORT OF DEFENDANTâ€™S AMENDED / RENEWED MOTION TO
+DISMISS COUNT II (BAD FAITH) OF PLAINTIFFâ€™S COMPLAINT AND TO STRIKE
+CERTAIN IMMATERIAL AND/OR IMPERTINENT ALLEGATIONS FROM COUNT I
+                       (BREACH OF CONTRACT)
+
+         Defendant, Liberty Mutual Personal Insurance Company submits this Brief in support of
+
+its Amended Motions to Dismiss.
+
+I.       STATEMENT OF RELEVANT FACTS
+
+         Pursuant to Plaintiffâ€™s Complaint, this case arises from a motor vehicle accident that
+
+occurred on or about January 12, 2024. (Doc. 1-5, Â¶ 3). Plaintiff, Nydia Rosario, alleges that she
+
+sustained injuries and damages as a result of the accident. (Id., Â¶Â¶ 19-23). Plaintiff alleges that the
+
+accident was caused by a driver who did not maintain sufficient liability insurance. (Id., Â¶ 13).
+
+Therefore, Plaintiff made a claim for Underinsured Motorist (â€œUIMâ€?) coverage pursuant to an
+
+automobile insurance policy issued by the Defendant, Liberty Mutual Personal Insurance
+
+Company, (hereinafter â€œLiberty Mutualâ€? or â€œDefendantâ€?) (Id., Â¶Â¶ 10-13). The parties had not
+
+settled or resolved the UIM claim prior to Plaintiff filing the instant Complaint.
+
+II.      STATEMENT OF PROCEDURAL HISTORY
+
+         Plaintiff initiated this action by filing a Complaint in the Philadelphia County Court of
+
+Common Pleas on December 9, 2025. (Doc. 1-5). Plaintiff served Defendant with the Complaint
+LEGAL/174061944.1
+
+
+
+
+                                                  1
+       Case 2:26-cv-00276-MAK         Document 12-1        Filed 01/26/26      Page 2 of 15
+
+
+
+
+on December 19, 2025. Defendant timely removed the case to this court on January 16, 2026.
+
+(Doc. 1).
+
+         Defendant filed Motions to Dismiss Counts II (Bad Faith) and III (Unfair Trade Practices
+
+and Consumer Protection Law) of Plaintiffâ€™s Complaint, and also to strike certain immaterial
+
+and/or impertinent allegations from Count I. (Breach of Contract). (Doc. 9).
+
+         After conferring with Plaintiffâ€™s counsel, Defendant filed Amended / Renewed Motions to
+
+Dismiss Count II (Bad Faith) and also to strike certain immaterial and/or impertinent allegations
+
+from Count I (Breach of Contract). This Brief is submitted in support of Defendantâ€™s Amended /
+
+Renewed Motions.
+
+III.     ARGUMENT
+
+         A.         THE COURT SHOULD GRANT DEFENDANTâ€™S MOTION TO DISMISS
+                    COUNT II (BAD FAITH), WITH PREJUDICE, BECAUSE PLAINTIFF
+                    HAS FAILED TO ASSERT A VIABLE CAUSE OF ACTION FOR BAD
+                    FAITH AND HAS OTHERWISE FAILED TO MEET THE PLEADING
+                    REQUIREMENTS OF FEDERAL RULE OF CIVIL PROCEDURE 8.
+
+1.       Standard of Review
+
+         Pursuant to Federal Rule of Civil Procedure 12(b)(6), this Court may dismiss Plaintiffâ€™s
+
+Complaint for failure to state a claim upon which relief can be granted. Fed. R. Civ. P. 12(b)(6).
+
+A motion to dismiss pursuant to Rule 12(b)(6) challenges the legal sufficiency of a complaint. In
+
+deciding a motion to dismiss, the court must accept all well-pleaded factual allegations as true,
+
+â€œconstrue the complaint in the light most favorable to the plaintiff, and determine whether, under
+
+any reasonable reading of the complaint, the plaintiff may be entitled to relief.â€? McTernan v. City
+
+of York, 564 F.3d 636, 646 (3d. Cir. 2009) (citations omitted).
+
+
+
+LEGAL/174061944.1
+
+
+
+
+                                                2
+      Case 2:26-cv-00276-MAK               Document 12-1         Filed 01/26/26      Page 3 of 15
+
+
+
+
+         Federal Rule of Civil Procedure 8 sets forth the mandatory pleading standard for
+
+complaints filed in federal courts and provides, in relevant part, as follows:
+
+                    (a)    Claim for Relief. A pleading that states a claim for relief must contain:
+
+                           (1)     a short and plain statement of the grounds for the courtâ€™s
+                                   jurisdiction, unless the court already has jurisdiction and the claim
+                                   needs no new jurisdictional support;
+                           (2)     a short and plain statement of the claim showing that the pleader is
+                                   entitled to relief; and
+                           (3)     a demand for the relief sought, which may include relief in the
+                                   alternative or different types of relief.
+Fed. R. Civ. P. 8(a).
+
+2.       Plaintiffâ€™s Complaint Contains No Allegations of Acts or Omissions to Support an
+         Actionable Insurance Bad Faith Claim.
+
+         With respect to the bad faith claim alleged in Count II of Plaintiffâ€™s Complaint, the
+
+conclusory averments are insufficient to satisfy the pleading requirements set forth in Federal Rule
+
+of Civil Procedure 8, specifically in light of Pennsylvania federal courtsâ€™ interpretation of pleading
+
+requirements with regard to insurance bad faith allegations.
+
+         The pivotal case on this issue is the United States Supreme Courtâ€™s decision in Ashcroft v.
+
+Iqbal, 556 U.S. 662 (2009). The Supreme Court provided the following relevant analysis of Rule
+
+8(a)(2):
+
+                    [T]he pleading standard Rule 8 announces does not require â€˜detailed
+                    factual allegationsâ€™ but it demands more than an unadorned, the
+                    defendant-unlawfully-harmed-me accusation. A pleading that offers
+                    â€˜labels and conclusionsâ€™ or â€˜a formulaic recitation of the elements of
+                    a cause of action will not do.â€™ Nor does a complaint suffice if it
+                    tenders â€˜naked assertions[s]â€™ devoid of further factual enhancement.
+
+Id. at 678 (citing Bell Atlantic Corp. V. Twombly, 550 U.S. 544, 557 (2007)) (internal citations
+
+omitted and emphasis supplied).
+
+
+
+LEGAL/174061944.1
+
+
+
+
+                                                      3
+      Case 2:26-cv-00276-MAK            Document 12-1         Filed 01/26/26       Page 4 of 15
+
+
+
+
+         In order to survive a motion to dismiss, a complaint must contain sufficient factual matter
+
+which, if accepted as true, states â€œa claim for relief that is plausible on its face.â€? Ashcroft, 556 U.S.
+
+at 678 (citing Twombly, 550 U.S. at 556). A claim is facially plausible when the plaintiff pleads
+
+factual averments that allow the court to draw reasonable inferences that the defendant is liable for
+
+the alleged misconduct. Ashcroft, 556 U.S. at 678 (citing Twombly, 550 U.S. at 556). While the
+
+plausibility standard is not equivalent to a â€œprobability requirement,â€? it requires more than a â€œsheer
+
+possibility that a defendant has acted unlawfully.â€? Id. The mere recital of the elements of a cause
+
+of action, supported by mere conclusory statements, does not meet the required pleading standard.
+
+Ashcroft, 556 U.S. at 678 (citing Twombly, 550 U.S. at 557). Only a complaint that sets forth a
+
+plausible claim for relief survives a motion to dismiss. Ashcroft, 556 U.S. at 679.
+
+         Following the Ashcroft and Twombly decisions, Pennsylvaniaâ€™s federal trial courts have
+
+consistently followed and applied a three-part analysis to determine whether allegations in a
+
+complaint survive a Rule 12(b)(6) motion to dismiss. Kiessling v. State Farm Mut. Auto Ins. Co.,
+
+2019 US. Dist. LEXIS 24085, at *5-6 (E.D. Pa. 2019). First, the court must consider the elements
+
+a plaintiff is required to plead for a particular claim. Id. Second, it is the District Courtâ€™s
+
+responsibility to identify all factual allegations that constitute nothing more than â€œlegal
+
+conclusionsâ€? or â€œnaked assertions,â€? since such allegations are â€œnot entitled to the assumption of
+
+truth and must be disregarded for purposes of resolving a 12(b)(6) motion to dismiss.â€? Id. Third,
+
+the District Court must identify the well-pleaded, non-conclusory factual allegations, and
+
+determine whether the complaint states a plausible claim for relief. Id.
+
+         In the instant matter, Plaintiff has failed to meet the pleading requirements of Federal Rule
+
+of Civil Procedure 8, with respect to Count II of her Complaint, requiring dismissal of that count
+
+
+LEGAL/174061944.1
+
+
+
+
+                                                   4
+      Case 2:26-cv-00276-MAK                 Document 12-1            Filed 01/26/26         Page 5 of 15
+
+
+
+
+with prejudice. Plaintiff has not included a short and plain statement, or any factual statement,
+
+sufficient to support a bad faith claim against Defendant. Plaintiff has not pled facts sufficient to
+
+establish that, if proven, she would be entitled to relief. What Plaintiff has included is a pro forma
+
+litany of the very unadorned, â€œdefendant-unlawfully-harmed-me accusationsâ€? that the Supreme
+
+Court rejected in Ashcroft, supra. In particular, Plaintiff has alleged in boilerplate and conclusory
+
+fashion:
+
+                                          COUNT II â€“ BAD FAITH
+
+                    25. Plaintiff, Nydia Rosario, incorporates herein the allegations set forth
+                    in the aforementioned paragraphs, inclusive, as if set forth below of
+                    length.1
+
+                    26. Defendant has acted, and continues to act, in bad faith,
+                    pursuant to 42 Pa. C.S.A Section 8371, by breaching the duty of
+                    good faith and fair dealing with respect to the insurance policy by
+                    failing to make any offer or make payments for underinsured
+                    motorist benefits covering Plaintiff.
+
+                    27. The outrageous, intentional, reckless, malicious and/or
+                    negligent acts and/or conduct of Defendant, by and through its
+                    agent and/or employee, including but not limited to, Preston Kidd,
+                    in making misrepresentations, in failing to make any offer and/or
+                    failing to make any payments, constitutes bad faith and Defendant
+                    should be liable for such conduct.
+
+                    28. Due to injuries sustained in the instant motor vehicle accident,
+                    Plaintiff is entitled recover to pain and suffering compensation far
+                    exceeding any already-exhausted benefits of the third party, Edith
+                    Brown, by and through AAA and Allstate.
+
+                    29. Defendant, without reasonable cause, has failed to act in good
+                    faith and fair dealing pertaining to the best interest of Plaintiff, an
+                    insured of Defendant.
+
+
+
+
+1
+  The aforementioned paragraphs (Â¶Â¶ 1-24) contain general allegations regarding the parties, the accident, available
+insurance coverage, plaintiffâ€™s alleged injuries and her claim for UIM coverage. These paragraphs do not include
+any factual allegations that are sufficient to support the alleged bad faith claim plead in Count II.
+LEGAL/174061944.1
+
+
+
+
+                                                          5
+      Case 2:26-cv-00276-MAK                 Document 12-1            Filed 01/26/26          Page 6 of 15
+
+
+
+
+                    30. Defendant has no reasonable justification in its failure to make
+                    any offer and/or make any payments to Plaintiff under the
+                    provisions of the said policy of insurance.
+
+                    31. In fact, Defendant's agents, including, but not limited to, Dustin
+                    Dodd, have made misrepresentations concerning the underinsured
+                    motorist claim.
+
+                    32. Defendant has acted, and continues to act, in bad faith by
+                    breaching the duty of good faith and fair dealing with respect to
+                    insurance policy and agreement in violation of 42 Pa. C.S.A.
+                    Section 8371.
+
+                    33. In relevant part, 42 Pa. C.S.A. Section 8371 provides as
+                    follows:
+
+                    In an action arising under an insurance policy, if the court finds
+                    that the insurer has acted in bad faith toward the insured, the Court
+                    may:
+
+                    (1) Award interest on the amount of the claim from the date the
+                    claim was made by the insured in an amount equal to the prime
+                    rate of interest plus 3%;
+
+                    (2) Award punitive damage against the insurer;
+
+                    (3) Assess court costs and attorney's fees against the insurer.
+
+Doc. 1-5, Â¶Â¶ 26-33.
+
+         As set forth above, Plaintiffâ€™s bad faith count is based solely upon legal conclusions and
+
+allegations and is devoid of facts to support those allegations. For example, while Plaintiff
+
+generally alleges that Defendant made â€œmisrepresentationsâ€? (Id., Â¶Â¶ 27 and 31), she failed to
+
+plead facts which identify the alleged misrepresentations or why she claims they were
+
+misleading. Further, Plaintiffâ€™s Complaint does not even clarify whether Defendant made no
+
+offer or, alternatively, made no payment. (Id., Â¶Â¶ 27 and 30).2
+
+
+2
+ During a meet and confer session, Plaintiffâ€™s counsel confirmed that a settlement offer was made and rejected
+prior to suit being filed. Pennsylvania case law is clear that a mere dispute as to value, without more, does not
+amount to bad faith. Brown v. Progressive Insurance Company, 860 A. 2d 493 (Pa. Super. 2004). Brown was
+LEGAL/174061944.1
+
+
+
+
+                                                          6
+      Case 2:26-cv-00276-MAK                 Document 12-1            Filed 01/26/26         Page 7 of 15
+
+
+
+
+         Plaintiffâ€™s boilerplate and conclusory averments are not accompanied by factual allegations
+
+sufficient to raise a plausible claim for alleged bad faith. Courts in this Circuit have routinely
+
+dismissed bad faith claims with such â€œbare-bonesâ€? and conclusory allegations. See Smith v. State
+
+Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 136 (3d. Cir. 2012); Rosenthal v. Am. States Ins. Co.,
+
+2019 U.S. Dist. LEXIS 50485, *14 (M.D. Pa. 2019); Moran v. United Servs. Auto. Ass'n, 2019
+
+U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019); Clarke v. Liberty Mut. Ins. Co., 2019 U.S. Dist.
+
+LEXIS 21507, *16 (M.D. Pa. 2019); McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist.
+
+LEXIS 19806, at *3 (E.D. Pa. 2019); Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist.
+
+LEXIS 74124, at *1 (E.D. Pa. 2018); Jones v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 93673, at
+
+*1 (E.D. Pa. 2017); Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159125, at *9-10 (E.D.
+
+Pa. 2015); Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 591 (E.D. Pa. 2010).
+
+         In Jones v. Allstate Ins. Co., for example, the plaintiff sued his insurer for bad faith and
+
+breach of contract following a disagreement between the parties as to the value of plaintiffâ€™s
+
+underinsured motorist claim. 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017). Jones alleged
+
+that defendant had acted in bad faith by failing to:
+
+                    (1)    act with reasonable promptness in evaluating and
+                           responding to his claim and reasonable fairness in paying
+                           the claim,
+
+                    (2)    negotiate his claim,
+
+                    (3)    properly investigate and evaluate his claim and
+
+
+reaffirmed five years later in Johnson v. Progressive Ins. Co., 987 A. 2d 781 (Pa. Super. 2009), where the Court
+reiterated its prior holdings that bad faith is not present merely because an insurer makes a low but reasonable
+estimate of an insured's damages. In Johnson, the court explained, "The underlying facts [here] involve nothing
+more than a normal dispute between an insured and insurer over the value of a UM claim. The scenario under
+consideration occurs routinely in the processing of an insurance claim. To permit this action to proceed under these
+facts would invite a floodgate of litigation any time an award is more than an insurer's offer to settleâ€¦â€?
+LEGAL/174061944.1
+
+
+
+
+                                                          7
+      Case 2:26-cv-00276-MAK            Document 12-1         Filed 01/26/26      Page 8 of 15
+
+
+
+
+                    (4)   request a defense medical examination of him.
+
+Id. In that case, Judge Pappert dismissed the bad faith claim, holding that plaintiffâ€™s allegations
+
+were insufficient to â€œraise the claim to a level of plausibility required to survive a Rule 12(b)(6)
+
+motion to dismiss. Id. at *2-3.
+
+         In McDonough v. State Farm Fire & Cas. Co., supra., the court also dismissed plaintiffâ€™s
+
+statutory bad faith claim. The court found that plaintiff had failed to state a plausible bad faith
+
+claim because he had not alleged any factual content indicating that State Farm lacked a reasonable
+
+basis for its decision, or that it knew or recklessly disregarded a lack of a reasonable basis. The
+
+plaintiffâ€™s conclusory statements argued only that defendant had â€œunreasonably withheld payment
+
+of underinsured motorist benefits under the policy, failed to make a reasonable offer of settlement,
+
+. . . [and] failed to perform an adequate investigation of the value of his claim.â€? These were the
+
+very type of bare-bones allegations that the Court found insufficient for purposes of stating a
+
+viable, statutory bad faith claim.
+
+         In Kiessling v. State Farm Mut. Auto Ins. Co., supra., this Court noted that bad faith claims
+
+are fact specific, and that in order to survive a motion to dismiss, a plaintiff must plead specific
+
+facts. 2019 U.S. Dist. LEXIS 24085, at *8 (E.D. Pa. 2019). A plaintiff cannot merely say that an
+
+insurer acted unfairly, but must specify what acts were unfair. Id. But allegations that, at their
+
+core, say no more than â€œinsurer negotiated unfairly because it negotiated unfairly,â€? or â€œinsurer
+
+acted in bad faith by acting in bad faith,â€? fall far short of meeting that critical pleading threshold.
+
+         This court has consistently dismissed bad faith counts at the preliminary stage, where, as
+
+here, the Complaint failed to include sufficient factual averments.          See, e.g., Kosmalski v.
+
+Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124 (E.D. Pa. 2018) ("Absent additional
+
+facts regarding Kosmalski's insurance claim and the accompanying investigation, negotiations, or
+LEGAL/174061944.1
+
+
+
+
+                                                   8
+      Case 2:26-cv-00276-MAK             Document 12-1         Filed 01/26/26       Page 9 of 15
+
+
+
+
+communications in support of the contention that Progressive's conduct was unreasonable and
+
+reckless, the Court is unable to infer bad faith on the part of Progressive."); Pasqualino v. State
+
+Farm Mut. Auto. Ins. Co., 2015 U.S. Dist. LEXIS 69318 (E.D. Pa. 2015) (Motion to dismiss
+
+granted and bad faith claim dismissed).
+
+         The allegations in Plaintiffâ€™s Complaint do not show that she is entitled to relief, with
+
+respect to Count II for alleged Bad Faith. The Complaint does not contain sufficient factual matter
+
+which, if accepted as true, states a claim for relief that is plausible on its face. Plaintiffâ€™s Complaint
+
+contains mere blanket allegations that are simply not actionable under the bad faith statute. Thus,
+
+because the Complaint lacks the necessary facts to meet the Ashcroft/Twombly standard, this Court
+
+should grant the motion and dismiss Count II, with prejudice.
+
+         B.         THE COURT SHOULD GRANT DEFENDANTâ€™S MOTION TO STRIKE
+                    PARAGRAPHS 15, 16 AND 17 TO THE EXTENT THAT THEY ARE
+                    INCORPORATED INTO COUNT I BECAUSE THEY CONSTITUTE
+                    ALLEGATIONS WHICH ARE IMMATERIAL AND/OR IMPERTINENT
+                    TO A CAUSE OF ACTION FOR UIM COVERAGE PLEAD AS A BREACH
+                    OF CONTRACT (COUNT I)
+
+         1.         Standard of Review
+
+         Federal Rule of Civil Procedure 12(f) provides, in pertinent part:
+
+                    (f)   Motion to Strike. The Court may strike from a pleading an
+                          insufficient defense or any redundant, immaterial, impertinent
+                          or scandalous matter. The Court may act:
+
+                          (1)    On its own; or
+
+                          (2)    On Motion made by a party either before responding to a
+                                 pleading, or, if a response is not allowed, within twenty
+                                 (20) days after being served with a pleading.
+
+Fed. R. Civ. P. 12(f).
+
+
+
+LEGAL/174061944.1
+
+
+
+
+                                                    9
+      Case 2:26-cv-00276-MAK            Document 12-1        Filed 01/26/26      Page 10 of 15
+
+
+
+
+         A decision to grant or deny a motion to strike a pleading, or any part of it, is vested in the
+
+trial court's discretion. Zaloga v. Provident Life & Accident Ins. Co. of Am., 671 F. Supp. 2d 623
+
+(M.D. Pa. 2009). The purpose of a motion to strike such as this one is to clean up the pleadings,
+
+streamline litigation, and avoid unnecessary forays into immaterial matters. Id. The moving party
+
+must establish that the allegations have no possible relation to the controversy, may cause prejudice
+
+to one of the parties, or otherwise confuse the issues that will, ultimately be presented to the finder
+
+of fact. Lane v. McLean, 2018 U.S. Dist. LEXIS 54033 (M.D. Pa. 2018).
+
+         2.         The Court should strike Paragraphs 15, 16 and 17 to the extent that they are
+                    incorporated into Count I of the Complaint.
+
+         Immaterial matter is that which has no essential or important relationship to the claim for
+
+relief. Hoffer v. Grane Ins. Co., 2014 U.S. Dist. LEXIS (M.D. Pa. 2014). Impertinent matter
+
+consists of statements that do not pertain, and are not necessary, to the issues in question. Id.
+
+         Here, Count I of Plaintiffâ€™s Complaint sets forth a claim â€“ in contract â€“ seeking an award
+
+of UIM benefits as a result of her involvement in a motor vehicle accident. Collectively, the
+
+averments set forth in Count I purport to set forth claims for breach of contract/UIM benefits under
+
+the Policy. While Defendant reserves and retains its right to contest and defend against those
+
+allegations of negligence, causation, and extent of damages, it is clear that Plaintiff has set forth a
+
+contract/UIM claim sufficient to survive preliminary challenge.
+
+         However, paragraphs 15, 16 and 17, which are incorporated into Count I, are extraneous
+
+to the contract/UIM claim, and should be stricken from that count. The averments and arguments
+
+encompassed within those paragraphs are neither material nor pertinent to the contract/UIM claim.
+
+They epitomize the immaterial and impertinent matters referenced within Fed. R. Civ. P. No. 12(f),
+
+and they appear there solely to prejudice Defendant, to potentially to expand the very limited scope
+LEGAL/174061944.1
+
+
+
+
+                                                  10
+      Case 2:26-cv-00276-MAK              Document 12-1        Filed 01/26/26     Page 11 of 15
+
+
+
+
+of discovery otherwise applicable to a contract claim, and to confuse and conflate the issues that
+
+will be presented to the fact finder. The impertinent and immaterial paragraphs state, in their
+
+entirety:
+
+                    15. Defendant has refused to fairly evaluate Plaintiffs underinsured
+                    motorist claim.
+
+                    16. Defendant has refused to make a good-faith settlement offer to
+                    resolve Plaintiff's underinsured motorist claim.
+
+                    17. Defendant has made misrepresentations to Plaintiff regarding
+                    its evaluation of Plaintiff's underinsured motorist claim.
+
+Doc. 1-5, Â¶Â¶ 15, 16 and 17.
+
+         Count I Plaintiffâ€™s Complaint, however, is a claim for UIM benefits under the Policy. It is
+
+a contract claim, seeking benefits allegedly due to Plaintiff under the terms of the contract - which
+
+in this case is the Liberty Mutual policy. Allegations that Liberty Mutual failed to make good faith
+
+settlement offers, fairly evaluate the claim, or made misrepresentations regarding the evaluation
+
+of the claim, exist solely to unfairly prejudice Liberty Mutual. Including them also implies â€“
+
+improperly and inappropriately â€“ that they are relevant to the issues of causation and extent of
+
+Plaintiffâ€™s alleged accident-related damages. They are not.
+
+         In Stepanovich v. State Farm, No. 1239 WDA, 2013 No. 1296 WDA 2012 (Pa. Super.
+
+October 15, 2013), the Pennsylvania Superior Court explained the issues involved in a UIM claim,
+
+pled as a breach of contract action:
+
+                    Although (plaintiff's) claim for underinsured motorist benefits is
+                    labeled as a breach of contractâ€¦ the contract is not technically
+                    breached until there has been a determination of liability and an
+                    award of damages in excess of the tortfeasor's liability limits. A
+                    UIM action represents a disagreement over third-party liability
+                    and/or the extent of damages. The insurance contract requires this
+                    agreement be resolved through a lawsuitâ€¦
+
+LEGAL/174061944.1
+
+
+
+
+                                                     11
+      Case 2:26-cv-00276-MAK             Document 12-1       Filed 01/26/26     Page 12 of 15
+
+
+
+
+         Here, Plaintiffâ€™s allegations relating to Liberty Mutualâ€™s claims handling are immaterial
+
+and impertinent to the issues of third party liability and/or damages. As it pertains to Count I, the
+
+fact finder will not be tasked with assessing pre-suit settlement negotiations or the handling of the
+
+UIM claim; its only instruction will be to return a verdict as to negligence/liability for the
+
+underlying accident, and as to causation, extent, and value of any and all accident-related damages.
+
+         Decisions from Federal District Courts in Pennsylvania have affirmed that, in a claim to
+
+recover UIM coverage, evidence regarding the insurerâ€™s handling of the claim is immaterial and
+
+impertinent. See, e.g., Schwendinger-Roy v. State Farm Mut. Auto. Ins. Co., No. 11-CIV-445
+
+(W.D. Pa. July 10, 2012); Moninghoff v. Tillet, 2012 U.S. Dist. LEXIS 190896 (E.D. Pa. June 27,
+
+2012); Wagner v. State Farm Mut. Auto. Ins. Co., 2014 U.S. Dist. LEXIS 194554 (E.D. Pa. Feb.
+
+20, 2014).
+
+         In Wagner v. State Farm, supra, the court was asked to address whether information
+
+relating to claim handling was relevant to a breach of contract claim to recover UIM benefits. The
+
+question arose in the context of the insured's motion to compel the deposition of the claim adjuster,
+
+but the issues and rationale used by the court to resolve them are applicable here as well. The
+
+court precluded the deposition and held, in part:
+
+                    The Court finds that Defendant has demonstrated good cause for the
+                    issuance of a protective order. Plaintiff seeks to depose named
+                    personnel to gather information about the evaluation of his UIM
+                    claim. However, information about claims handling is not
+                    relevant to a breach of contract claimâ€¦ (Emphasis added.)
+
+         In Schwendinger-Roy v. State Farm, supra, the plaintiff filed suit for UIM benefits â€“ a
+
+contract claim like the one at issue here. State Farm filed a motion in limine to preclude evidence
+
+regarding its alleged breach of the insurance contract and improper claims handling. The Court
+
+granted the motion and precluded evidence regarding State Farm's handling of the claim as well
+LEGAL/174061944.1
+
+
+
+
+                                                   12
+      Case 2:26-cv-00276-MAK             Document 12-1       Filed 01/26/26     Page 13 of 15
+
+
+
+
+as its alleged breach of the insurance contract. Further, the Court explained that the probative
+
+value of revealing State Farm's settlement offer, the amount of available UIM coverage and the
+
+amount of the third party settlement were outweighed by the potential for confusing the issues and
+
+misleading the jury. It is that same potential for confusion that merits the granting of the instant
+
+motion here.
+
+         In Moninghoff v. Tillet, supra, the Court discussed important distinctions between a UIM
+
+claim, requiring an assessment of liability and damages, as compared to an alleged bad faith claim,
+
+implicating the insurer's conduct. The Court held (emphasis added):
+
+                    The Court finds that it makes sense to separate out the UIM claims
+                    from the bad faith claims in this matter. The UIM claims require
+                    determination of liability and assessment of the plaintiff's
+                    injuries. The process that the insurer went through in
+                    investigating the plaintiff's claim is not relevant to that issueâ€¦
+
+         Here, Plaintiffâ€™s allegations and inferences in Paragraphs 15, 16 and 17, relating to the
+
+Liberty Mutualâ€™s conduct and claims handling, would only be material and pertinent if they bore
+
+some relevance to the underlying issues of liability, negligence, and/or causation and extent of
+
+damages from the motor vehicle accident. But they donâ€™t.
+
+         Therefore, the allegations included within Paragraphs 15, 16 and 17 are immaterial and
+
+impertinent as it pertains to Count I and should be stricken from that Count pursuant to F.R.C.P.
+
+12(f).
+
+IV.      CONCLUSION
+
+         Defendant, Liberty Mutual Personal Insurance Company respectfully moves this
+
+Honorable Court to grant its Motion and dismiss Count II (bad faith) of Plaintiffâ€™s complaint and
+
+
+
+
+LEGAL/174061944.1
+
+
+
+
+                                                   13
+      Case 2:26-cv-00276-MAK         Document 12-1        Filed 01/26/26      Page 14 of 15
+
+
+
+
+also dismiss/strike paragraphs 15, 16 and 17 to the extent they are incorporated into Count I.
+
+                                      Respectfully submitted:
+
+                                      Robert E. Smith, Esquire
+                                      Marshall Dennehey, P.C.
+                                      Attorney I.D. 69699
+                                      P.O. box 3118
+                                      Scranton, PA 18505
+                                      570-496-4611
+                                      Resmith@mdwcg.com
+Date: 1/26/26
+
+
+
+
+LEGAL/174061944.1
+
+
+
+
+                                                14
+      Case 2:26-cv-00276-MAK        Document 12-1        Filed 01/26/26     Page 15 of 15
+
+
+
+
+                 IN THE UNITED STATES DISTRICT COURT
+              FOR THE EASTERN DISTRICT OF PENNSYLVANIA
+                                    :
+NADIA ROSARIO                       : CIVIL ACTION
+                   Plaintiff        :
+                                    :
+v.                                  :
+                                    :
+LIBERTY MUTUAL PERSONAL INSURANCE : 2:26-CV-00276-MAK
+COMPANY                             :
+                                    :
+                  Defendant         :
+
+
+                               CERTIFICATE OF SERVICE
+
+       I, Robert E. Smith, Esquire, hereby certify that on 1/26/26, I served a true and correct
+copy of a Defendantâ€™s Amended / Renewed Motions to Dismiss, Amended Brief in Support and
+proposed Order via electronic filing upon the following:
+
+Johanna Simpson, Esquire
+KWARTLER MANUS, LLC
+1429 Walnut St, 14th Floor
+Philadelphia, PA 19102
+
+                                     Respectfully submitted:
+
+
+
+                                     Robert E. Smith, Esquire
+                                     Marshall Dennehey, P.C.
+                                     Attorney I.D. 69699
+                                     P.O. box 3118
+                                     Scranton, PA 18505
+                                     570-496-4611
+                                     Resmith@mdwcg.com
+
+
+
+
+LEGAL/174061944.1
+
+
+
+
+                                               15
+

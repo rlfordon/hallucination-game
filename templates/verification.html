@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Verification Phase — Citation Hallucination Game{% endblock %}
+
+{% block header_center %}
+<span class="team-badge" id="teamBadge">Loading...</span>
+<span class="progress-badge" id="reviewCount">Reviewed: 0/23 | Flagged: 0</span>
+{% endblock %}
+
+{% block header_right %}
+<button class="btn btn-ghost btn-sm" onclick="window.print()">Export PDF</button>
+<div class="timer" id="timerDisplay">--:--</div>
+{% endblock %}
+
+{% block content %}
+<div class="game-layout">
+    <div class="brief-panel" id="briefPanel">
+        <div class="brief-text" id="briefText">Loading brief...</div>
+    </div>
+    <div class="side-panel" id="sidePanel">
+        <div class="empty-state">Click a citation to review it</div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/verification.js') }}"></script>
+{% endblock %}

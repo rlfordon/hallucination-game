@@ -1,0 +1,291 @@
+{% extends "base.html" %}
+{% block title %}Professor Panel — Citation Hallucination Game{% endblock %}
+
+{% block header_center %}
+<span class="phase-indicator" id="phaseIndicator">Loading...</span>
+{% endblock %}
+
+{% block header_right %}
+<div class="timer" id="timerDisplay" style="display:none">--:--</div>
+{% endblock %}
+
+{% block content %}
+<div class="professor-layout" id="profApp">
+    <!-- Create Game -->
+    <div class="control-card full-width" id="createSection">
+        <h3>Create Game</h3>
+        <p style="color: var(--gray-500); font-size: 0.875rem; margin-bottom: 1rem;">
+            Create a new game session for your class.
+        </p>
+        <button class="btn btn-primary btn-lg" onclick="createGame()">Create New Game</button>
+    </div>
+
+    <!-- Game Code Display (shown after creation) -->
+    <div class="control-card full-width hidden" id="gameCodeSection">
+        <h3>Game Code</h3>
+        <div class="game-code-display" id="gameCodeDisplay"></div>
+        <p style="color: var(--gray-500); font-size: 0.875rem; text-align:center;">
+            Share this code with your students
+        </p>
+    </div>
+
+    <!-- Teams & Players -->
+    <div class="control-card hidden" id="teamsSection">
+        <h3>Teams & Players</h3>
+        <div id="teamsList"></div>
+        <div id="unassignedPlayers" class="mt-2"></div>
+    </div>
+
+    <!-- Controls -->
+    <div class="control-card hidden" id="controlsSection">
+        <h3>Game Controls</h3>
+        <div id="controlButtons"></div>
+    </div>
+
+    <!-- Progress -->
+    <div class="control-card full-width hidden" id="progressSection">
+        <h3>Team Progress</h3>
+        <div id="progressDisplay"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+const API = {
+    token: localStorage.getItem('prof_session_token'),
+    gameId: localStorage.getItem('prof_game_id'),
+
+    headers() {
+        const h = { 'Content-Type': 'application/json' };
+        if (this.token) h['X-Session-Token'] = this.token;
+        return h;
+    },
+
+    async post(url, data) {
+        const res = await fetch(url, { method: 'POST', headers: this.headers(), body: JSON.stringify(data) });
+        return res.json();
+    },
+
+    async get(url) {
+        const res = await fetch(url, { headers: this.headers() });
+        return res.json();
+    }
+};
+
+let currentPhase = 'lobby';
+let timerEnd = null;
+let timerInterval;
+
+async function createGame() {
+    const data = await API.post('/api/game/create', {});
+    if (data.error) { alert(data.error); return; }
+
+    localStorage.setItem('prof_session_token', data.session_token);
+    localStorage.setItem('prof_game_id', data.game_id);
+    API.token = data.session_token;
+    API.gameId = data.game_id;
+
+    document.getElementById('createSection').classList.add('hidden');
+    document.getElementById('gameCodeSection').classList.remove('hidden');
+    document.getElementById('gameCodeDisplay').textContent = data.game_code;
+    document.getElementById('teamsSection').classList.remove('hidden');
+    document.getElementById('controlsSection').classList.remove('hidden');
+
+    updatePhaseIndicator('lobby');
+    renderControls('lobby');
+    startPolling();
+}
+
+function startPolling() {
+    setInterval(pollStatus, 2500);
+    pollStatus();
+}
+
+async function pollStatus() {
+    if (!API.token) return;
+    try {
+        const status = await API.get('/api/game/status');
+        if (status.error) return;
+
+        currentPhase = status.phase;
+        timerEnd = status.timer_end;
+
+        updatePhaseIndicator(status.phase);
+        renderTeams(status.teams, status.unassigned_players);
+        renderControls(status.phase);
+        renderProgress(status.teams, status.phase);
+        updateTimer();
+    } catch (e) {}
+}
+
+function updatePhaseIndicator(phase) {
+    const el = document.getElementById('phaseIndicator');
+    el.textContent = phase.charAt(0).toUpperCase() + phase.slice(1);
+    el.className = 'phase-indicator phase-' + phase;
+}
+
+function renderTeams(teams, unassigned) {
+    const container = document.getElementById('teamsList');
+    container.innerHTML = teams.map(team => `
+        <div class="team-card" style="margin-bottom: 0.75rem;">
+            <h4>${team.team_name} (${team.players.length})</h4>
+            <ul class="player-list">
+                ${team.players.map(p => `<li>${p.player_name}</li>`).join('')}
+            </ul>
+        </div>
+    `).join('');
+
+    const unContainer = document.getElementById('unassignedPlayers');
+    if (unassigned && unassigned.length > 0) {
+        unContainer.innerHTML = `
+            <h4 style="font-size: 0.8125rem; color: var(--gray-500); margin-bottom: 0.5rem;">Unassigned</h4>
+            ${unassigned.map(p => `
+                <div style="display: flex; align-items: center; gap: 0.5rem; margin-bottom: 0.375rem;">
+                    <span style="font-size: 0.8125rem;">${p.player_name}</span>
+                    <select onchange="assignPlayer('${p.player_id}', this.value)" style="width: auto; padding: 0.25rem 0.5rem; font-size: 0.75rem;">
+                        <option value="">Assign to...</option>
+                        ${teams.map(t => `<option value="${t.team_id}">${t.team_name}</option>`).join('')}
+                    </select>
+                </div>
+            `).join('')}
+        `;
+    } else {
+        unContainer.innerHTML = '';
+    }
+}
+
+async function assignPlayer(playerId, teamId) {
+    if (!teamId) return;
+    await API.post('/api/game/assign-teams', { player_id: playerId, team_id: teamId });
+    pollStatus();
+}
+
+function renderControls(phase) {
+    const container = document.getElementById('controlButtons');
+    let html = '';
+
+    if (phase === 'lobby') {
+        html = `
+            <div class="form-group">
+                <label for="fabMinutes">Fabrication Time (minutes)</label>
+                <input type="number" id="fabMinutes" value="20" min="1" max="60">
+            </div>
+            <button class="btn btn-primary btn-block btn-lg" onclick="startGame()">Start Fabrication Phase</button>
+        `;
+    } else if (phase === 'fabrication') {
+        html = `
+            <div class="form-group">
+                <label for="verMinutes">Verification Time (minutes)</label>
+                <input type="number" id="verMinutes" value="15" min="1" max="60">
+            </div>
+            <button class="btn btn-primary btn-block btn-lg" onclick="startVerification()">End Fabrication / Start Verification</button>
+        `;
+    } else if (phase === 'verification') {
+        html = `
+            <button class="btn btn-primary btn-block btn-lg" onclick="revealResults()">Reveal Results</button>
+        `;
+    } else if (phase === 'reveal') {
+        html = `
+            <a href="/game/${API.gameId}" class="btn btn-primary btn-block btn-lg" style="text-decoration:none;">View Scoreboard</a>
+        `;
+    }
+
+    // Add restart button for any non-lobby phase
+    if (phase !== 'lobby') {
+        html += `<button class="btn btn-danger btn-block mt-2" onclick="resetGame()">Restart Game</button>`;
+    }
+
+    container.innerHTML = html;
+}
+
+function renderProgress(teams, phase) {
+    const container = document.getElementById('progressDisplay');
+    const section = document.getElementById('progressSection');
+
+    if (phase === 'lobby') {
+        section.classList.add('hidden');
+        return;
+    }
+
+    section.classList.remove('hidden');
+    container.innerHTML = teams.map(team => `
+        <div style="display: flex; justify-content: space-between; padding: 0.5rem 0; border-bottom: 1px solid var(--gray-100);">
+            <span style="font-weight: 500;">${team.team_name}</span>
+            <span style="color: var(--gray-500); font-size: 0.875rem;">
+                ${phase === 'fabrication'
+                    ? `${team.swap_count} swaps`
+                    : phase === 'verification'
+                        ? `${team.flag_count} flags`
+                        : ''}
+            </span>
+        </div>
+    `).join('');
+}
+
+async function startGame() {
+    const minutes = parseInt(document.getElementById('fabMinutes')?.value || '20');
+    const data = await API.post('/api/game/start', { minutes });
+    if (data.error) { alert(data.error); return; }
+    pollStatus();
+}
+
+async function startVerification() {
+    const minutes = parseInt(document.getElementById('verMinutes')?.value || '15');
+    const data = await API.post('/api/game/swap', { minutes });
+    if (data.error) { alert(data.error); return; }
+    pollStatus();
+}
+
+async function revealResults() {
+    const data = await API.post('/api/game/reveal', {});
+    if (data.error) { alert(data.error); return; }
+    pollStatus();
+}
+
+async function resetGame() {
+    if (!confirm('Reset the game? This will clear all swaps, flags, and return to the lobby.')) return;
+    const data = await API.post('/api/game/reset', {});
+    if (data.error) { alert(data.error); return; }
+    pollStatus();
+}
+
+function updateTimer() {
+    const el = document.getElementById('timerDisplay');
+    if (!timerEnd) { el.style.display = 'none'; return; }
+
+    const now = new Date();
+    const end = new Date(timerEnd);
+    const diff = Math.max(0, Math.floor((end - now) / 1000));
+
+    if (diff <= 0 && currentPhase !== 'reveal' && currentPhase !== 'lobby') {
+        el.textContent = '0:00';
+        el.classList.add('warning');
+    } else {
+        const mins = Math.floor(diff / 60);
+        const secs = diff % 60;
+        el.textContent = `${mins}:${secs.toString().padStart(2, '0')}`;
+        el.classList.toggle('warning', diff < 60);
+    }
+    el.style.display = 'block';
+}
+
+// On load — check for existing session
+document.addEventListener('DOMContentLoaded', () => {
+    if (API.token && API.gameId) {
+        API.get('/api/game/status').then(data => {
+            if (!data.error) {
+                document.getElementById('createSection').classList.add('hidden');
+                document.getElementById('gameCodeSection').classList.remove('hidden');
+                document.getElementById('gameCodeDisplay').textContent = data.game_code;
+                document.getElementById('teamsSection').classList.remove('hidden');
+                document.getElementById('controlsSection').classList.remove('hidden');
+                startPolling();
+            }
+        }).catch(() => {});
+    }
+
+    setInterval(updateTimer, 1000);
+});
+</script>
+{% endblock %}

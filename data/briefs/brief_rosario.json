@@ -1,0 +1,585 @@
+{
+  "brief_id": "brief_rosario",
+  "title": "Brief in Support of Defendant’s Amended / Renewed Motion to Dismiss",
+  "case_name": "Rosario v. Liberty Mutual Personal Insurance Company",
+  "court": "E.D. Pa.",
+  "docket": "2:26-cv-00276-MAK",
+  "paragraphs": [
+    {
+      "id": "para_caption",
+      "section": "caption",
+      "type": "caption",
+      "text": "IN THE UNITED STATES DISTRICT COURT\nFOR THE EASTERN DISTRICT OF PENNSYLVANIA\n\nNYDIA ROSARIO, Plaintiff\nv.\nLIBERTY MUTUAL PERSONAL INSURANCE COMPANY, Defendant\n\nCIVIL ACTION 2:26-cv-00276-MAK",
+      "citations": []
+    },
+    {
+      "id": "para_title",
+      "section": "title",
+      "type": "heading",
+      "text": "BRIEF IN SUPPORT OF DEFENDANT’S AMENDED / RENEWED MOTION TO DISMISS COUNT II (BAD FAITH) OF PLAINTIFF’S COMPLAINT AND TO STRIKE CERTAIN IMMATERIAL AND/OR IMPERTINENT ALLEGATIONS FROM COUNT I (BREACH OF CONTRACT)",
+      "citations": []
+    },
+    {
+      "id": "para_intro",
+      "section": "intro",
+      "type": "body",
+      "text": "Defendant, Liberty Mutual Personal Insurance Company submits this Brief in support of its Amended Motions to Dismiss.",
+      "citations": []
+    },
+    {
+      "id": "para_facts_heading",
+      "section": "I",
+      "type": "heading",
+      "text": "I. STATEMENT OF RELEVANT FACTS",
+      "citations": []
+    },
+    {
+      "id": "para_facts_1",
+      "section": "I",
+      "type": "body",
+      "text": "Pursuant to Plaintiff’s Complaint, this case arises from a motor vehicle accident that occurred on or about January 12, 2024. (Doc. 1-5, ¶ 3). Plaintiff, Nydia Rosario, alleges that she sustained injuries and damages as a result of the accident. (Id., ¶¶ 19-23). Plaintiff alleges that the accident was caused by a driver who did not maintain sufficient liability insurance. (Id., ¶ 13). Therefore, Plaintiff made a claim for Underinsured Motorist (“UIM”) coverage pursuant to an automobile insurance policy issued by the Defendant, Liberty Mutual Personal Insurance Company, (hereinafter “Liberty Mutual” or “Defendant”) (Id., ¶¶ 10-13). The parties had not settled or resolved the UIM claim prior to Plaintiff filing the instant Complaint.",
+      "citations": []
+    },
+    {
+      "id": "para_proc_heading",
+      "section": "II",
+      "type": "heading",
+      "text": "II. STATEMENT OF PROCEDURAL HISTORY",
+      "citations": []
+    },
+    {
+      "id": "para_proc_1",
+      "section": "II",
+      "type": "body",
+      "text": "Plaintiff initiated this action by filing a Complaint in the Philadelphia County Court of Common Pleas on December 9, 2025. (Doc. 1-5). Plaintiff served Defendant with the Complaint on December 19, 2025. Defendant timely removed the case to this court on January 16, 2026. (Doc. 1).",
+      "citations": []
+    },
+    {
+      "id": "para_proc_2",
+      "section": "II",
+      "type": "body",
+      "text": "Defendant filed Motions to Dismiss Counts II (Bad Faith) and III (Unfair Trade Practices and Consumer Protection Law) of Plaintiff’s Complaint, and also to strike certain immaterial and/or impertinent allegations from Count I. (Breach of Contract). (Doc. 9).",
+      "citations": []
+    },
+    {
+      "id": "para_proc_3",
+      "section": "II",
+      "type": "body",
+      "text": "After conferring with Plaintiff’s counsel, Defendant filed Amended / Renewed Motions to Dismiss Count II (Bad Faith) and also to strike certain immaterial and/or impertinent allegations from Count I (Breach of Contract). This Brief is submitted in support of Defendant’s Amended / Renewed Motions.",
+      "citations": []
+    },
+    {
+      "id": "para_arg_heading",
+      "section": "III",
+      "type": "heading",
+      "text": "III. ARGUMENT",
+      "citations": []
+    },
+    {
+      "id": "para_arg_a_heading",
+      "section": "III.A",
+      "type": "heading",
+      "text": "A. THE COURT SHOULD GRANT DEFENDANT’S MOTION TO DISMISS COUNT II (BAD FAITH), WITH PREJUDICE, BECAUSE PLAINTIFF HAS FAILED TO ASSERT A VIABLE CAUSE OF ACTION FOR BAD FAITH AND HAS OTHERWISE FAILED TO MEET THE PLEADING REQUIREMENTS OF FEDERAL RULE OF CIVIL PROCEDURE 8.",
+      "citations": []
+    },
+    {
+      "id": "para_sor_heading",
+      "section": "III.A.1",
+      "type": "heading",
+      "text": "1. Standard of Review",
+      "citations": []
+    },
+    {
+      "id": "para_sor_1",
+      "section": "III.A.1",
+      "type": "body",
+      "text": "Pursuant to Federal Rule of Civil Procedure 12(b)(6), this Court may dismiss Plaintiff’s Complaint for failure to state a claim upon which relief can be granted. Fed. R. Civ. P. 12(b)(6). A motion to dismiss pursuant to Rule 12(b)(6) challenges the legal sufficiency of a complaint. In deciding a motion to dismiss, the court must accept all well-pleaded factual allegations as true, “construe the complaint in the light most favorable to the plaintiff, and determine whether, under any reasonable reading of the complaint, the plaintiff may be entitled to relief.” McTernan v. City of York, 564 F.3d 636, 646 (3d. Cir. 2009) (citations omitted).",
+      "citations": [
+        {
+          "citation_id": "cite_01",
+          "start": 566,
+          "end": 645,
+          "display_text": "McTernan v. City of York, 564 F.3d 636, 646 (3d. Cir. 2009) (citations omitted)"
+        }
+      ]
+    },
+    {
+      "id": "para_rule8_intro",
+      "section": "III.A.1",
+      "type": "body",
+      "text": "Federal Rule of Civil Procedure 8 sets forth the mandatory pleading standard for complaints filed in federal courts and provides, in relevant part, as follows:",
+      "citations": []
+    },
+    {
+      "id": "para_rule8_quote",
+      "section": "III.A.1",
+      "type": "block_quote",
+      "text": "(a) Claim for Relief. A pleading that states a claim for relief must contain:\n(1) a short and plain statement of the grounds for the court’s jurisdiction, unless the court already has jurisdiction and the claim needs no new jurisdictional support;\n(2) a short and plain statement of the claim showing that the pleader is entitled to relief; and\n(3) a demand for the relief sought, which may include relief in the alternative or different types of relief.\nFed. R. Civ. P. 8(a).",
+      "citations": []
+    },
+    {
+      "id": "para_a2_heading",
+      "section": "III.A.2",
+      "type": "heading",
+      "text": "2. Plaintiff’s Complaint Contains No Allegations of Acts or Omissions to Support an Actionable Insurance Bad Faith Claim.",
+      "citations": []
+    },
+    {
+      "id": "para_a2_1",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "With respect to the bad faith claim alleged in Count II of Plaintiff’s Complaint, the conclusory averments are insufficient to satisfy the pleading requirements set forth in Federal Rule of Civil Procedure 8, specifically in light of Pennsylvania federal courts’ interpretation of pleading requirements with regard to insurance bad faith allegations.",
+      "citations": []
+    },
+    {
+      "id": "para_iqbal_intro",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "The pivotal case on this issue is the United States Supreme Court’s decision in Ashcroft v. Iqbal, 556 U.S. 662 (2009). The Supreme Court provided the following relevant analysis of Rule 8(a)(2):",
+      "citations": [
+        {
+          "citation_id": "cite_02",
+          "start": 80,
+          "end": 118,
+          "display_text": "Ashcroft v. Iqbal, 556 U.S. 662 (2009)"
+        }
+      ]
+    },
+    {
+      "id": "para_iqbal_quote",
+      "section": "III.A.2",
+      "type": "block_quote",
+      "text": "[T]he pleading standard Rule 8 announces does not require ‘detailed factual allegations’ but it demands more than an unadorned, the defendant-unlawfully-harmed-me accusation. A pleading that offers ‘labels and conclusions’ or ‘a formulaic recitation of the elements of a cause of action will not do.’ Nor does a complaint suffice if it tenders ‘naked assertions[s]’ devoid of further factual enhancement.",
+      "citations": []
+    },
+    {
+      "id": "para_iqbal_cite",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "Id. at 678 (citing Bell Atlantic Corp. V. Twombly, 550 U.S. 544, 557 (2007)) (internal citations omitted and emphasis supplied).",
+      "citations": [
+        {
+          "citation_id": "cite_03",
+          "start": 19,
+          "end": 75,
+          "display_text": "Bell Atlantic Corp. V. Twombly, 550 U.S. 544, 557 (2007)"
+        }
+      ]
+    },
+    {
+      "id": "para_plausibility",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "In order to survive a motion to dismiss, a complaint must contain sufficient factual matter which, if accepted as true, states “a claim for relief that is plausible on its face.” Ashcroft, 556 U.S. at 678 (citing Twombly, 550 U.S. at 556). A claim is facially plausible when the plaintiff pleads factual averments that allow the court to draw reasonable inferences that the defendant is liable for the alleged misconduct. Ashcroft, 556 U.S. at 678 (citing Twombly, 550 U.S. at 556). While the plausibility standard is not equivalent to a “probability requirement,” it requires more than a “sheer possibility that a defendant has acted unlawfully.” Id. The mere recital of the elements of a cause of action, supported by mere conclusory statements, does not meet the required pleading standard. Ashcroft, 556 U.S. at 678 (citing Twombly, 550 U.S. at 557). Only a complaint that sets forth a plausible claim for relief survives a motion to dismiss. Ashcroft, 556 U.S. at 679.",
+      "citations": []
+    },
+    {
+      "id": "para_three_part",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "Following the Ashcroft and Twombly decisions, Pennsylvania’s federal trial courts have consistently followed and applied a three-part analysis to determine whether allegations in a complaint survive a Rule 12(b)(6) motion to dismiss. Kiessling v. State Farm Mut. Auto Ins. Co., 2019 US. Dist. LEXIS 24085, at *5-6 (E.D. Pa. 2019). First, the court must consider the elements a plaintiff is required to plead for a particular claim. Id. Second, it is the District Court’s responsibility to identify all factual allegations that constitute nothing more than “legal conclusions” or “naked assertions,” since such allegations are “not entitled to the assumption of truth and must be disregarded for purposes of resolving a 12(b)(6) motion to dismiss.” Id. Third, the District Court must identify the well-pleaded, non-conclusory factual allegations, and determine whether the complaint states a plausible claim for relief. Id.",
+      "citations": [
+        {
+          "citation_id": "cite_04",
+          "start": 234,
+          "end": 329,
+          "display_text": "Kiessling v. State Farm Mut. Auto Ins. Co., 2019 US. Dist. LEXIS 24085, at *5-6 (E.D. Pa. 2019)"
+        }
+      ]
+    },
+    {
+      "id": "para_failed_pleading",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "In the instant matter, Plaintiff has failed to meet the pleading requirements of Federal Rule of Civil Procedure 8, with respect to Count II of her Complaint, requiring dismissal of that count with prejudice. Plaintiff has not included a short and plain statement, or any factual statement, sufficient to support a bad faith claim against Defendant. Plaintiff has not pled facts sufficient to establish that, if proven, she would be entitled to relief. What Plaintiff has included is a pro forma litany of the very unadorned, “defendant-unlawfully-harmed-me accusations” that the Supreme Court rejected in Ashcroft, supra. In particular, Plaintiff has alleged in boilerplate and conclusory fashion:",
+      "citations": []
+    },
+    {
+      "id": "para_complaint_quote",
+      "section": "III.A.2",
+      "type": "block_quote",
+      "text": "COUNT II — BAD FAITH\n\n25. Plaintiff, Nydia Rosario, incorporates herein the allegations set forth in the aforementioned paragraphs, inclusive, as if set forth below of length.¹\n\n26. Defendant has acted, and continues to act, in bad faith, pursuant to 42 Pa. C.S.A Section 8371, by breaching the duty of good faith and fair dealing with respect to the insurance policy by failing to make any offer or make payments for underinsured motorist benefits covering Plaintiff.\n\n27. The outrageous, intentional, reckless, malicious and/or negligent acts and/or conduct of Defendant, by and through its agent and/or employee, including but not limited to, Preston Kidd, in making misrepresentations, in failing to make any offer and/or failing to make any payments, constitutes bad faith and Defendant should be liable for such conduct.\n\n28. Due to injuries sustained in the instant motor vehicle accident, Plaintiff is entitled recover to pain and suffering compensation far exceeding any already-exhausted benefits of the third party, Edith Brown, by and through AAA and Allstate.\n\n29. Defendant, without reasonable cause, has failed to act in good faith and fair dealing pertaining to the best interest of Plaintiff, an insured of Defendant.\n\n30. Defendant has no reasonable justification in its failure to make any offer and/or make any payments to Plaintiff under the provisions of the said policy of insurance.\n\n31. In fact, Defendant's agents, including, but not limited to, Dustin Dodd, have made misrepresentations concerning the underinsured motorist claim.\n\n32. Defendant has acted, and continues to act, in bad faith by breaching the duty of good faith and fair dealing with respect to insurance policy and agreement in violation of 42 Pa. C.S.A. Section 8371.\n\n33. In relevant part, 42 Pa. C.S.A. Section 8371 provides as follows:\n\nIn an action arising under an insurance policy, if the court finds that the insurer has acted in bad faith toward the insured, the Court may:\n\n(1) Award interest on the amount of the claim from the date the claim was made by the insured in an amount equal to the prime rate of interest plus 3%;\n\n(2) Award punitive damage against the insurer;\n\n(3) Assess court costs and attorney's fees against the insurer.",
+      "citations": []
+    },
+    {
+      "id": "para_doc_cite",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "Doc. 1-5, ¶¶ 26-33.",
+      "citations": []
+    },
+    {
+      "id": "para_footnote1",
+      "section": "III.A.2",
+      "type": "footnote",
+      "text": "¹ The aforementioned paragraphs (¶¶ 1-24) contain general allegations regarding the parties, the accident, available insurance coverage, plaintiff’s alleged injuries and her claim for UIM coverage. These paragraphs do not include any factual allegations that are sufficient to support the alleged bad faith claim plead in Count II.",
+      "citations": []
+    },
+    {
+      "id": "para_devoid",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "As set forth above, Plaintiff’s bad faith count is based solely upon legal conclusions and allegations and is devoid of facts to support those allegations. For example, while Plaintiff generally alleges that Defendant made “misrepresentations” (Id., ¶¶ 27 and 31), she failed to plead facts which identify the alleged misrepresentations or why she claims they were misleading. Further, Plaintiff’s Complaint does not even clarify whether Defendant made no offer or, alternatively, made no payment. (Id., ¶¶ 27 and 30).²",
+      "citations": []
+    },
+    {
+      "id": "para_footnote2",
+      "section": "III.A.2",
+      "type": "footnote",
+      "text": "² During a meet and confer session, Plaintiff’s counsel confirmed that a settlement offer was made and rejected prior to suit being filed. Pennsylvania case law is clear that a mere dispute as to value, without more, does not amount to bad faith. Brown v. Progressive Insurance Company, 860 A. 2d 493 (Pa. Super. 2004). Brown was reaffirmed five years later in Johnson v. Progressive Ins. Co., 987 A. 2d 781 (Pa. Super. 2009), where the Court reiterated its prior holdings that bad faith is not present merely because an insurer makes a low but reasonable estimate of an insured’s damages. In Johnson, the court explained, “The underlying facts [here] involve nothing more than a normal dispute between an insured and insurer over the value of a UM claim. The scenario under consideration occurs routinely in the processing of an insurance claim. To permit this action to proceed under these facts would invite a floodgate of litigation any time an award is more than an insurer’s offer to settle…”",
+      "citations": [
+        {
+          "citation_id": "cite_05",
+          "start": 247,
+          "end": 318,
+          "display_text": "Brown v. Progressive Insurance Company, 860 A. 2d 493 (Pa. Super. 2004)"
+        },
+        {
+          "citation_id": "cite_06",
+          "start": 361,
+          "end": 425,
+          "display_text": "Johnson v. Progressive Ins. Co., 987 A. 2d 781 (Pa. Super. 2009)"
+        }
+      ]
+    },
+    {
+      "id": "para_string_cite",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "Plaintiff’s boilerplate and conclusory averments are not accompanied by factual allegations sufficient to raise a plausible claim for alleged bad faith. Courts in this Circuit have routinely dismissed bad faith claims with such “bare-bones” and conclusory allegations. See Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 136 (3d. Cir. 2012); Rosenthal v. Am. States Ins. Co., 2019 U.S. Dist. LEXIS 50485, *14 (M.D. Pa. 2019); Moran v. United Servs. Auto. Ass’n, 2019 U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019); Clarke v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 21507, *16 (M.D. Pa. 2019); McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19806, at *3 (E.D. Pa. 2019); Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124, at *1 (E.D. Pa. 2018); Jones v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017); Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159125, at *9-10 (E.D. Pa. 2015); Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 591 (E.D. Pa. 2010).",
+      "citations": [
+        {
+          "citation_id": "cite_07",
+          "start": 273,
+          "end": 351,
+          "display_text": "Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 136 (3d. Cir. 2012)"
+        },
+        {
+          "citation_id": "cite_08",
+          "start": 353,
+          "end": 435,
+          "display_text": "Rosenthal v. Am. States Ins. Co., 2019 U.S. Dist. LEXIS 50485, *14 (M.D. Pa. 2019)"
+        },
+        {
+          "citation_id": "cite_09",
+          "start": 437,
+          "end": 521,
+          "display_text": "Moran v. United Servs. Auto. Ass’n, 2019 U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019)"
+        },
+        {
+          "citation_id": "cite_10",
+          "start": 523,
+          "end": 604,
+          "display_text": "Clarke v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 21507, *16 (M.D. Pa. 2019)"
+        },
+        {
+          "citation_id": "cite_11",
+          "start": 606,
+          "end": 697,
+          "display_text": "McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19806, at *3 (E.D. Pa. 2019)"
+        },
+        {
+          "citation_id": "cite_12",
+          "start": 699,
+          "end": 790,
+          "display_text": "Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124, at *1 (E.D. Pa. 2018)"
+        },
+        {
+          "citation_id": "cite_13",
+          "start": 792,
+          "end": 870,
+          "display_text": "Jones v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017)"
+        },
+        {
+          "citation_id": "cite_14",
+          "start": 872,
+          "end": 957,
+          "display_text": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159125, at *9-10 (E.D. Pa. 2015)"
+        },
+        {
+          "citation_id": "cite_15",
+          "start": 959,
+          "end": 1040,
+          "display_text": "Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 591 (E.D. Pa. 2010)"
+        }
+      ]
+    },
+    {
+      "id": "para_jones_intro",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "In Jones v. Allstate Ins. Co., for example, the plaintiff sued his insurer for bad faith and breach of contract following a disagreement between the parties as to the value of plaintiff’s underinsured motorist claim. 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017). Jones alleged that defendant had acted in bad faith by failing to:",
+      "citations": []
+    },
+    {
+      "id": "para_jones_quote",
+      "section": "III.A.2",
+      "type": "block_quote",
+      "text": "(1) act with reasonable promptness in evaluating and responding to his claim and reasonable fairness in paying the claim,\n(2) negotiate his claim,\n(3) properly investigate and evaluate his claim and\n(4) request a defense medical examination of him.",
+      "citations": []
+    },
+    {
+      "id": "para_jones_holding",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "Id. In that case, Judge Pappert dismissed the bad faith claim, holding that plaintiff’s allegations were insufficient to “raise the claim to a level of plausibility required to survive a Rule 12(b)(6) motion to dismiss. Id. at *2-3.",
+      "citations": []
+    },
+    {
+      "id": "para_mcdonough",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "In McDonough v. State Farm Fire & Cas. Co., supra., the court also dismissed plaintiff’s statutory bad faith claim. The court found that plaintiff had failed to state a plausible bad faith claim because he had not alleged any factual content indicating that State Farm lacked a reasonable basis for its decision, or that it knew or recklessly disregarded a lack of a reasonable basis. The plaintiff’s conclusory statements argued only that defendant had “unreasonably withheld payment of underinsured motorist benefits under the policy, failed to make a reasonable offer of settlement, . . . [and] failed to perform an adequate investigation of the value of his claim.” These were the very type of bare-bones allegations that the Court found insufficient for purposes of stating a viable, statutory bad faith claim.",
+      "citations": []
+    },
+    {
+      "id": "para_kiessling_detail",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "In Kiessling v. State Farm Mut. Auto Ins. Co., supra., this Court noted that bad faith claims are fact specific, and that in order to survive a motion to dismiss, a plaintiff must plead specific facts. 2019 U.S. Dist. LEXIS 24085, at *8 (E.D. Pa. 2019). A plaintiff cannot merely say that an insurer acted unfairly, but must specify what acts were unfair. Id. But allegations that, at their core, say no more than “insurer negotiated unfairly because it negotiated unfairly,” or “insurer acted in bad faith by acting in bad faith,” fall far short of meeting that critical pleading threshold.",
+      "citations": []
+    },
+    {
+      "id": "para_kosmalski_pasqualino",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "This court has consistently dismissed bad faith counts at the preliminary stage, where, as here, the Complaint failed to include sufficient factual averments. See, e.g., Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124 (E.D. Pa. 2018) (“Absent additional facts regarding Kosmalski’s insurance claim and the accompanying investigation, negotiations, or communications in support of the contention that Progressive’s conduct was unreasonable and reckless, the Court is unable to infer bad faith on the part of Progressive.”); Pasqualino v. State Farm Mut. Auto. Ins. Co., 2015 U.S. Dist. LEXIS 69318 (E.D. Pa. 2015) (Motion to dismiss granted and bad faith claim dismissed).",
+      "citations": [
+        {
+          "citation_id": "cite_16",
+          "start": 544,
+          "end": 633,
+          "display_text": "Pasqualino v. State Farm Mut. Auto. Ins. Co., 2015 U.S. Dist. LEXIS 69318 (E.D. Pa. 2015)"
+        }
+      ]
+    },
+    {
+      "id": "para_section_a_conclusion",
+      "section": "III.A.2",
+      "type": "body",
+      "text": "The allegations in Plaintiff’s Complaint do not show that she is entitled to relief, with respect to Count II for alleged Bad Faith. The Complaint does not contain sufficient factual matter which, if accepted as true, states a claim for relief that is plausible on its face. Plaintiff’s Complaint contains mere blanket allegations that are simply not actionable under the bad faith statute. Thus, because the Complaint lacks the necessary facts to meet the Ashcroft/Twombly standard, this Court should grant the motion and dismiss Count II, with prejudice.",
+      "citations": []
+    },
+    {
+      "id": "para_arg_b_heading",
+      "section": "III.B",
+      "type": "heading",
+      "text": "B. THE COURT SHOULD GRANT DEFENDANT’S MOTION TO STRIKE PARAGRAPHS 15, 16 AND 17 TO THE EXTENT THAT THEY ARE INCORPORATED INTO COUNT I BECAUSE THEY CONSTITUTE ALLEGATIONS WHICH ARE IMMATERIAL AND/OR IMPERTINENT TO A CAUSE OF ACTION FOR UIM COVERAGE PLEAD AS A BREACH OF CONTRACT (COUNT I)",
+      "citations": []
+    },
+    {
+      "id": "para_b1_heading",
+      "section": "III.B.1",
+      "type": "heading",
+      "text": "1. Standard of Review",
+      "citations": []
+    },
+    {
+      "id": "para_rule12f_intro",
+      "section": "III.B.1",
+      "type": "body",
+      "text": "Federal Rule of Civil Procedure 12(f) provides, in pertinent part:",
+      "citations": []
+    },
+    {
+      "id": "para_rule12f_quote",
+      "section": "III.B.1",
+      "type": "block_quote",
+      "text": "(f) Motion to Strike. The Court may strike from a pleading an insufficient defense or any redundant, immaterial, impertinent or scandalous matter. The Court may act:\n(1) On its own; or\n(2) On Motion made by a party either before responding to a pleading, or, if a response is not allowed, within twenty (20) days after being served with a pleading.\nFed. R. Civ. P. 12(f).",
+      "citations": []
+    },
+    {
+      "id": "para_zaloga_lane",
+      "section": "III.B.1",
+      "type": "body",
+      "text": "A decision to grant or deny a motion to strike a pleading, or any part of it, is vested in the trial court’s discretion. Zaloga v. Provident Life & Accident Ins. Co. of Am., 671 F. Supp. 2d 623 (M.D. Pa. 2009). The purpose of a motion to strike such as this one is to clean up the pleadings, streamline litigation, and avoid unnecessary forays into immaterial matters. Id. The moving party must establish that the allegations have no possible relation to the controversy, may cause prejudice to one of the parties, or otherwise confuse the issues that will, ultimately be presented to the finder of fact. Lane v. McLean, 2018 U.S. Dist. LEXIS 54033 (M.D. Pa. 2018).",
+      "citations": [
+        {
+          "citation_id": "cite_17",
+          "start": 121,
+          "end": 209,
+          "display_text": "Zaloga v. Provident Life & Accident Ins. Co. of Am., 671 F. Supp. 2d 623 (M.D. Pa. 2009)"
+        },
+        {
+          "citation_id": "cite_18",
+          "start": 605,
+          "end": 664,
+          "display_text": "Lane v. McLean, 2018 U.S. Dist. LEXIS 54033 (M.D. Pa. 2018)"
+        }
+      ]
+    },
+    {
+      "id": "para_b2_heading",
+      "section": "III.B.2",
+      "type": "heading",
+      "text": "2. The Court should strike Paragraphs 15, 16 and 17 to the extent that they are incorporated into Count I of the Complaint.",
+      "citations": []
+    },
+    {
+      "id": "para_hoffer",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "Immaterial matter is that which has no essential or important relationship to the claim for relief. Hoffer v. Grane Ins. Co., 2014 U.S. Dist. LEXIS (M.D. Pa. 2014). Impertinent matter consists of statements that do not pertain, and are not necessary, to the issues in question. Id.",
+      "citations": [
+        {
+          "citation_id": "cite_19",
+          "start": 100,
+          "end": 163,
+          "display_text": "Hoffer v. Grane Ins. Co., 2014 U.S. Dist. LEXIS (M.D. Pa. 2014)"
+        }
+      ]
+    },
+    {
+      "id": "para_uim_claim",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "Here, Count I of Plaintiff’s Complaint sets forth a claim – in contract – seeking an award of UIM benefits as a result of her involvement in a motor vehicle accident. Collectively, the averments set forth in Count I purport to set forth claims for breach of contract/UIM benefits under the Policy. While Defendant reserves and retains its right to contest and defend against those allegations of negligence, causation, and extent of damages, it is clear that Plaintiff has set forth a contract/UIM claim sufficient to survive preliminary challenge.",
+      "citations": []
+    },
+    {
+      "id": "para_extraneous",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "However, paragraphs 15, 16 and 17, which are incorporated into Count I, are extraneous to the contract/UIM claim, and should be stricken from that count. The averments and arguments encompassed within those paragraphs are neither material nor pertinent to the contract/UIM claim. They epitomize the immaterial and impertinent matters referenced within Fed. R. Civ. P. No. 12(f), and they appear there solely to prejudice Defendant, to potentially to expand the very limited scope of discovery otherwise applicable to a contract claim, and to confuse and conflate the issues that will be presented to the fact finder. The impertinent and immaterial paragraphs state, in their entirety:",
+      "citations": []
+    },
+    {
+      "id": "para_quoted_15_17",
+      "section": "III.B.2",
+      "type": "block_quote",
+      "text": "15. Defendant has refused to fairly evaluate Plaintiffs underinsured motorist claim.\n\n16. Defendant has refused to make a good-faith settlement offer to resolve Plaintiff's underinsured motorist claim.\n\n17. Defendant has made misrepresentations to Plaintiff regarding its evaluation of Plaintiff's underinsured motorist claim.\n\nDoc. 1-5, ¶¶ 15, 16 and 17.",
+      "citations": []
+    },
+    {
+      "id": "para_contract_claim",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "Count I Plaintiff’s Complaint, however, is a claim for UIM benefits under the Policy. It is a contract claim, seeking benefits allegedly due to Plaintiff under the terms of the contract - which in this case is the Liberty Mutual policy. Allegations that Liberty Mutual failed to make good faith settlement offers, fairly evaluate the claim, or made misrepresentations regarding the evaluation of the claim, exist solely to unfairly prejudice Liberty Mutual. Including them also implies – improperly and inappropriately – that they are relevant to the issues of causation and extent of Plaintiff’s alleged accident-related damages. They are not.",
+      "citations": []
+    },
+    {
+      "id": "para_stepanovich_intro",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "In Stepanovich v. State Farm, No. 1239 WDA, 2013 No. 1296 WDA 2012 (Pa. Super. October 15, 2013), the Pennsylvania Superior Court explained the issues involved in a UIM claim, pled as a breach of contract action:",
+      "citations": [
+        {
+          "citation_id": "cite_20",
+          "start": 3,
+          "end": 96,
+          "display_text": "Stepanovich v. State Farm, No. 1239 WDA, 2013 No. 1296 WDA 2012 (Pa. Super. October 15, 2013)"
+        }
+      ]
+    },
+    {
+      "id": "para_stepanovich_quote",
+      "section": "III.B.2",
+      "type": "block_quote",
+      "text": "Although (plaintiff’s) claim for underinsured motorist benefits is labeled as a breach of contract… the contract is not technically breached until there has been a determination of liability and an award of damages in excess of the tortfeasor’s liability limits. A UIM action represents a disagreement over third-party liability and/or the extent of damages. The insurance contract requires this agreement be resolved through a lawsuit…",
+      "citations": []
+    },
+    {
+      "id": "para_claims_handling",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "Here, Plaintiff’s allegations relating to Liberty Mutual’s claims handling are immaterial and impertinent to the issues of third party liability and/or damages. As it pertains to Count I, the fact finder will not be tasked with assessing pre-suit settlement negotiations or the handling of the UIM claim; its only instruction will be to return a verdict as to negligence/liability for the underlying accident, and as to causation, extent, and value of any and all accident-related damages.",
+      "citations": []
+    },
+    {
+      "id": "para_string_cite_b",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "Decisions from Federal District Courts in Pennsylvania have affirmed that, in a claim to recover UIM coverage, evidence regarding the insurer’s handling of the claim is immaterial and impertinent. See, e.g., Schwendinger-Roy v. State Farm Mut. Auto. Ins. Co., No. 11-CIV-445 (W.D. Pa. July 10, 2012); Moninghoff v. Tillet, 2012 U.S. Dist. LEXIS 190896 (E.D. Pa. June 27, 2012); Wagner v. State Farm Mut. Auto. Ins. Co., 2014 U.S. Dist. LEXIS 194554 (E.D. Pa. Feb. 20, 2014).",
+      "citations": [
+        {
+          "citation_id": "cite_21",
+          "start": 208,
+          "end": 299,
+          "display_text": "Schwendinger-Roy v. State Farm Mut. Auto. Ins. Co., No. 11-CIV-445 (W.D. Pa. July 10, 2012)"
+        },
+        {
+          "citation_id": "cite_22",
+          "start": 301,
+          "end": 376,
+          "display_text": "Moninghoff v. Tillet, 2012 U.S. Dist. LEXIS 190896 (E.D. Pa. June 27, 2012)"
+        },
+        {
+          "citation_id": "cite_23",
+          "start": 378,
+          "end": 473,
+          "display_text": "Wagner v. State Farm Mut. Auto. Ins. Co., 2014 U.S. Dist. LEXIS 194554 (E.D. Pa. Feb. 20, 2014)"
+        }
+      ]
+    },
+    {
+      "id": "para_wagner_intro",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "In Wagner v. State Farm, supra, the court was asked to address whether information relating to claim handling was relevant to a breach of contract claim to recover UIM benefits. The question arose in the context of the insured’s motion to compel the deposition of the claim adjuster, but the issues and rationale used by the court to resolve them are applicable here as well. The court precluded the deposition and held, in part:",
+      "citations": []
+    },
+    {
+      "id": "para_wagner_quote",
+      "section": "III.B.2",
+      "type": "block_quote",
+      "text": "The Court finds that Defendant has demonstrated good cause for the issuance of a protective order. Plaintiff seeks to depose named personnel to gather information about the evaluation of his UIM claim. However, information about claims handling is not relevant to a breach of contract claim… (Emphasis added.)",
+      "citations": []
+    },
+    {
+      "id": "para_schwendinger",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "In Schwendinger-Roy v. State Farm, supra, the plaintiff filed suit for UIM benefits – a contract claim like the one at issue here. State Farm filed a motion in limine to preclude evidence regarding its alleged breach of the insurance contract and improper claims handling. The Court granted the motion and precluded evidence regarding State Farm’s handling of the claim as well as its alleged breach of the insurance contract. Further, the Court explained that the probative value of revealing State Farm’s settlement offer, the amount of available UIM coverage and the amount of the third party settlement were outweighed by the potential for confusing the issues and misleading the jury. It is that same potential for confusion that merits the granting of the instant motion here.",
+      "citations": []
+    },
+    {
+      "id": "para_moninghoff_intro",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "In Moninghoff v. Tillet, supra, the Court discussed important distinctions between a UIM claim, requiring an assessment of liability and damages, as compared to an alleged bad faith claim, implicating the insurer’s conduct. The Court held (emphasis added):",
+      "citations": []
+    },
+    {
+      "id": "para_moninghoff_quote",
+      "section": "III.B.2",
+      "type": "block_quote",
+      "text": "The Court finds that it makes sense to separate out the UIM claims from the bad faith claims in this matter. The UIM claims require determination of liability and assessment of the plaintiff’s injuries. The process that the insurer went through in investigating the plaintiff’s claim is not relevant to that issue…",
+      "citations": []
+    },
+    {
+      "id": "para_immaterial_conclusion",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "Here, Plaintiff’s allegations and inferences in Paragraphs 15, 16 and 17, relating to the Liberty Mutual’s conduct and claims handling, would only be material and pertinent if they bore some relevance to the underlying issues of liability, negligence, and/or causation and extent of damages from the motor vehicle accident. But they don’t.",
+      "citations": []
+    },
+    {
+      "id": "para_strike_conclusion",
+      "section": "III.B.2",
+      "type": "body",
+      "text": "Therefore, the allegations included within Paragraphs 15, 16 and 17 are immaterial and impertinent as it pertains to Count I and should be stricken from that Count pursuant to F.R.C.P. 12(f).",
+      "citations": []
+    },
+    {
+      "id": "para_conclusion_heading",
+      "section": "IV",
+      "type": "heading",
+      "text": "IV. CONCLUSION",
+      "citations": []
+    },
+    {
+      "id": "para_conclusion",
+      "section": "IV",
+      "type": "body",
+      "text": "Defendant, Liberty Mutual Personal Insurance Company respectfully moves this Honorable Court to grant its Motion and dismiss Count II (bad faith) of Plaintiff’s complaint and also dismiss/strike paragraphs 15, 16 and 17 to the extent they are incorporated into Count I.",
+      "citations": []
+    },
+    {
+      "id": "para_signature",
+      "section": "signature",
+      "type": "signature",
+      "text": "Respectfully submitted:\n\nRobert E. Smith, Esquire\nMarshall Dennehey, P.C.\nAttorney I.D. 69699\nP.O. box 3118\nScranton, PA 18505\n570-496-4611\nResmith@mdwcg.com\nDate: 1/26/26",
+      "citations": []
+    }
+  ]
+}

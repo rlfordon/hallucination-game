@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block title %}Results — Citation Hallucination Game{% endblock %}
+
+{% block header_center %}
+<span class="phase-indicator phase-reveal">Results</span>
+{% endblock %}
+
+{% block content %}
+<div class="scoreboard-layout" id="scoreboardApp">
+    <h2 style="margin-bottom: 1.5rem;">Final Scores</h2>
+    <div class="scores-grid" id="scoresGrid">Loading...</div>
+
+    <div class="type-stats" id="typeStats"></div>
+
+    <div id="detailsSection" class="mt-3"></div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/scoreboard.js') }}"></script>
+{% endblock %}
