@@ -2,10 +2,19 @@
 
 Flask-based classroom game where law students detect AI-generated citation hallucinations in legal briefs.
 
+## Running
+
+```bash
+python3 app.py
+```
+
+Runs on **port 5001** (`http://localhost:5001`). Port 5000 is reserved by AirPlay Receiver on macOS.
+
 ## Architecture
 
 - **Backend**: Flask (app.py), SQLite (database.py), game logic (game_state.py)
 - **Frontend**: Vanilla JS, served from `static/js/` and `templates/`
+- **Shared JS**: `static/js/common.js` — API client, `escapeHtml()`, `Timer`. Loaded by all pages.
 - **Data**: JSON files in `data/briefs/` and `data/hallucinations/`
 
 ## Brief Data Model (`data/briefs/<brief_id>.json`)
