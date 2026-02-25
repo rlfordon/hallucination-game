@@ -2,16 +2,9 @@
 /* Depends on: common.js (API) */
 
 async function startSolitaire() {
-    const name = document.getElementById('soloName').value.trim();
     const numSwaps = parseInt(document.getElementById('soloSwaps').value, 10) || 8;
     const errorEl = document.getElementById('soloError');
     errorEl.classList.add('hidden');
-
-    if (!name) {
-        errorEl.textContent = 'Please enter your name.';
-        errorEl.classList.remove('hidden');
-        return;
-    }
 
     // Clear stale session data
     localStorage.removeItem('session_token');
@@ -19,7 +12,6 @@ async function startSolitaire() {
     localStorage.removeItem('game_code');
 
     const result = await API.post('/api/solitaire/start', {
-        player_name: name,
         num_swaps: numSwaps
     });
 

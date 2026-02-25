@@ -302,11 +302,8 @@ def api_game_status():
 def api_solitaire_start():
     """Create a solitaire game: one player, auto-generated swaps, straight to verification."""
     data = request.json or {}
-    name = data.get('player_name', '').strip()
+    name = data.get('player_name', '').strip() or 'Solo Player'
     num_swaps = data.get('num_swaps', 8)
-
-    if not name:
-        return jsonify({'error': 'Name is required'}), 400
 
     # Create solitaire game
     game_id, game_code = db.create_game(mode='solitaire')
