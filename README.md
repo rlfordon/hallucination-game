@@ -107,3 +107,7 @@ hallucination-game/
 4. The app discovers new briefs automatically
 
 See `CLAUDE.md` for the detailed data model and step-by-step workflow.
+
+## License
+
+[MIT](LICENSE)

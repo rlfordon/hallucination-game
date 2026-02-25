@@ -1,6 +1,6 @@
 # Citation Hallucination Game
 
-Flask-based classroom game where law students detect AI-generated citation hallucinations in legal briefs.
+Flask-based game where law students detect AI-generated citation hallucinations in legal briefs. Supports both team (classroom) and solitaire (solo practice) modes.
 
 ## Running
 
@@ -16,6 +16,8 @@ Runs on **port 5001** (`http://localhost:5001`). Port 5000 is reserved by AirPla
 - **Frontend**: Vanilla JS, served from `static/js/` and `templates/`
 - **Shared JS**: `static/js/common.js` — API client, `escapeHtml()`, `Timer`. Loaded by all pages. `API.token` inits as `null`; each page sets credentials in its own `DOMContentLoaded` handler (student pages use `session_token`, professor uses `prof_session_token`).
 - **Data**: JSON files in `data/briefs/` and `data/hallucinations/`
+- **Routing**: `GET /` → landing page (mode selection), `GET /join` → team game lobby, `GET /professor` → professor dashboard, `GET /game/<id>` → phase-appropriate template
+- **Game modes**: `games.mode` column — `'multiplayer'` (default) or `'solitaire'`. Solitaire creates a single-team game, auto-generates swaps, skips fabrication, and goes straight to verification with no timer. The `/api/solitaire/start` and `/api/solitaire/reveal` endpoints handle the solitaire lifecycle.
 
 ## Brief Data Model (`data/briefs/<brief_id>.json`)
 
