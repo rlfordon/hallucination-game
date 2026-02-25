@@ -39,6 +39,7 @@ def init_db():
             phase TEXT NOT NULL DEFAULT 'lobby',
             timer_end TEXT,
             brief_id TEXT,
+            mode TEXT NOT NULL DEFAULT 'multiplayer',
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
 
@@ -80,6 +81,11 @@ def init_db():
             PRIMARY KEY (game_id, team_id, citation_id)
         );
     """)
+    # Migration: add mode column if missing (existing DBs)
+    cursor = db.execute("PRAGMA table_info(games)")
+    columns = [row[1] for row in cursor.fetchall()]
+    if 'mode' not in columns:
+        db.execute("ALTER TABLE games ADD COLUMN mode TEXT NOT NULL DEFAULT 'multiplayer'")
     db.commit()
 
 
@@ -94,14 +100,14 @@ def generate_id():
     return str(uuid.uuid4())
 
 
-def create_game():
+def create_game(mode='multiplayer'):
     """Create a new game session."""
     db = get_db()
     game_id = generate_id()
     game_code = generate_game_code()
     db.execute(
-        "INSERT INTO games (game_id, game_code, phase) VALUES (?, ?, 'lobby')",
-        (game_id, game_code)
+        "INSERT INTO games (game_id, game_code, phase, mode) VALUES (?, ?, 'lobby', ?)",
+        (game_id, game_code, mode)
     )
     db.commit()
     return game_id, game_code

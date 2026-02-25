@@ -50,7 +50,13 @@ def timer_iso(minutes):
 
 @app.route('/')
 def index():
-    """Student landing page."""
+    """Landing page — choose mode."""
+    return render_template('landing.html')
+
+
+@app.route('/join')
+def join_page():
+    """Student lobby for joining a team game."""
     return render_template('lobby.html')
 
 
@@ -290,6 +296,73 @@ def api_game_status():
     })
 
 
+# ── Solitaire API ────────────────────────────────────────────────────────
+
+@app.route('/api/solitaire/start', methods=['POST'])
+def api_solitaire_start():
+    """Create a solitaire game: one player, auto-generated swaps, straight to verification."""
+    data = request.json or {}
+    name = data.get('player_name', '').strip()
+    num_swaps = data.get('num_swaps', 8)
+
+    if not name:
+        return jsonify({'error': 'Name is required'}), 400
+
+    # Create solitaire game
+    game_id, game_code = db.create_game(mode='solitaire')
+
+    # Auto-set brief
+    briefs = gs.list_briefs()
+    if not briefs:
+        return jsonify({'error': 'No briefs available'}), 500
+    brief_id = briefs[0]['brief_id']
+    db.set_game_brief(game_id, brief_id)
+
+    # Create single team and player
+    team_id = db.create_team(game_id, 'Solo')
+    player_id, session_token = db.create_player(game_id, name)
+    db.assign_player_team(player_id, team_id)
+
+    # Team verifies its own swaps (fabrication_team = itself)
+    db.set_team_briefs(team_id,
+                       fabrication_brief=brief_id,
+                       verification_brief=brief_id,
+                       fabrication_team=team_id)
+
+    # Generate random swaps
+    swaps = gs.generate_random_swaps(brief_id, num_swaps)
+    for swap in swaps:
+        db.upsert_swap(game_id, team_id,
+                        swap['citation_id'], swap['hallucination_type'], swap['option_id'])
+
+    # Jump straight to verification (no timer)
+    db.set_game_phase(game_id, 'verification')
+
+    return jsonify({
+        'game_id': game_id,
+        'session_token': session_token
+    })
+
+
+@app.route('/api/solitaire/reveal', methods=['POST'])
+def api_solitaire_reveal():
+    """End solitaire verification and show results."""
+    player, err, code = require_player()
+    if err:
+        return err, code
+
+    game = db.get_game(player['game_id'])
+    if not game:
+        return jsonify({'error': 'Game not found'}), 404
+    if game['mode'] != 'solitaire':
+        return jsonify({'error': 'Not a solitaire game'}), 400
+    if game['phase'] != 'verification':
+        return jsonify({'error': 'Game not in verification phase'}), 400
+
+    db.set_game_phase(game['game_id'], 'reveal')
+    return jsonify({'ok': True, 'phase': 'reveal'})
+
+
 # ── Student API ──────────────────────────────────────────────────────────────
 
 @app.route('/api/choose-team', methods=['POST'])
@@ -360,7 +433,7 @@ def api_phase():
     if not game:
         return jsonify({'error': 'Game not found'}), 404
 
-    result = {'phase': game['phase'], 'timer_end': game['timer_end']}
+    result = {'phase': game['phase'], 'timer_end': game['timer_end'], 'mode': game['mode']}
 
     # Include team info if player is assigned
     if player['team_id']:
@@ -638,19 +711,42 @@ def api_scoreboard():
     team_dicts = [dict(t) for t in teams]
     scores = gs.compute_scores(game['game_id'], team_dicts, swaps_by_team, flags_by_team, brief_id)
 
-    # Compute aggregate stats
-    all_fab_details = []
-    for tid, data in scores.items():
-        all_fab_details.extend(data['fabrication_details'])
+    is_solitaire = game['mode'] == 'solitaire'
 
-    type_stats = {}
-    for d in all_fab_details:
-        ht = d['hallucination_type']
-        if ht not in type_stats:
-            type_stats[ht] = {'total': 0, 'caught': 0}
-        type_stats[ht]['total'] += 1
-        if d['caught']:
-            type_stats[ht]['caught'] += 1
+    if is_solitaire:
+        # Zero out fabrication scores (system-generated, not player-earned)
+        for tid, data in scores.items():
+            data['fabrication_score'] = 0
+            data['fabrication_details'] = []
+            data['total_score'] = data['verification_score']
+
+        # Build type_stats from swaps + flags directly
+        type_stats = {}
+        for tid in swaps_by_team:
+            for s in swaps_by_team[tid]:
+                ht = s['hallucination_type']
+                cid = s['citation_id']
+                if ht not in type_stats:
+                    type_stats[ht] = {'total': 0, 'caught': 0}
+                type_stats[ht]['total'] += 1
+                # Check if the solo player flagged this citation
+                for f in flags_by_team.get(tid, []):
+                    if f['citation_id'] == cid and f['verdict'] == 'fake':
+                        type_stats[ht]['caught'] += 1
+                        break
+    else:
+        # Compute aggregate stats from fabrication details
+        type_stats = {}
+        all_fab_details = []
+        for tid, data in scores.items():
+            all_fab_details.extend(data['fabrication_details'])
+        for d in all_fab_details:
+            ht = d['hallucination_type']
+            if ht not in type_stats:
+                type_stats[ht] = {'total': 0, 'caught': 0}
+            type_stats[ht]['total'] += 1
+            if d['caught']:
+                type_stats[ht]['caught'] += 1
 
     for ht in type_stats:
         total = type_stats[ht]['total']
@@ -660,7 +756,8 @@ def api_scoreboard():
     return jsonify({
         'scores': scores,
         'type_stats': type_stats,
-        'brief_id': brief_id
+        'brief_id': brief_id,
+        'mode': game['mode']
     })
 
 

@@ -5,6 +5,7 @@ let briefData = null;
 let currentFlags = {};  // citation_id -> verdict
 let allCitationIds = [];
 let selectedCitation = null;
+let isSolitaire = false;
 
 async function init() {
     const data = await API.get('/api/brief');
@@ -161,27 +162,39 @@ function startTimer() {
 }
 
 function startPolling() {
-    setInterval(async () => {
-        try {
-            const data = await API.get('/api/game/phase');
+    function handlePhaseData(data) {
+        if (data.mode === 'solitaire') {
+            isSolitaire = true;
+            document.getElementById('finishSolitaireBtn').classList.remove('hidden');
+            document.getElementById('timerDisplay').classList.add('hidden');
+            document.getElementById('teamBadge').textContent = 'Solo Practice';
+        } else {
             Timer.setEnd(data.timer_end);
-
             if (data.team_name) {
                 document.getElementById('teamBadge').textContent = data.team_name;
             }
+        }
 
-            if (data.phase === 'reveal') {
-                window.location.href = `/game/${API.gameId}`;
-            }
+        if (data.phase === 'reveal') {
+            window.location.href = `/game/${API.gameId}`;
+        }
+    }
+
+    setInterval(async () => {
+        try {
+            const data = await API.get('/api/game/phase');
+            handlePhaseData(data);
         } catch (e) {}
     }, 2500);
 
-    API.get('/api/game/phase').then(data => {
-        Timer.setEnd(data.timer_end);
-        if (data.team_name) {
-            document.getElementById('teamBadge').textContent = data.team_name;
-        }
-    });
+    API.get('/api/game/phase').then(handlePhaseData);
+}
+
+async function finishSolitaire() {
+    const result = await API.post('/api/solitaire/reveal', {});
+    if (result.ok) {
+        window.location.href = `/game/${API.gameId}`;
+    }
 }
 
 document.addEventListener('DOMContentLoaded', () => {

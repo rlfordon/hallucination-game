@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% block title %}Citation Hallucination Game{% endblock %}
+
+{% block content %}
+<div class="landing-container">
+    <h2>Citation Hallucination Game</h2>
+    <p>Practice spotting AI-generated citation hallucinations in legal briefs.</p>
+
+    <div class="mode-grid">
+        <!-- Professor -->
+        <div class="mode-card">
+            <h3>Professor</h3>
+            <p>Create and manage a classroom game session.</p>
+            <a href="/professor" class="btn btn-primary btn-block">Professor Dashboard</a>
+        </div>
+
+        <!-- Solitaire -->
+        <div class="mode-card">
+            <h3>Solo Practice</h3>
+            <p>Practice detecting hallucinations on your own.</p>
+            <div class="form-group">
+                <label for="soloName">Your Name</label>
+                <input type="text" id="soloName" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+                <label for="soloSwaps">Number of hallucinations</label>
+                <input type="number" id="soloSwaps" value="8" min="1" max="20">
+            </div>
+            <button class="btn btn-primary btn-block" onclick="startSolitaire()">Start Solo Game</button>
+            <div id="soloError" class="hidden" style="color: var(--red); font-size: 0.875rem; margin-top: 0.75rem;"></div>
+        </div>
+
+        <!-- Join Team Game -->
+        <div class="mode-card">
+            <h3>Join Team Game</h3>
+            <p>Enter a game code from your professor to join a team session.</p>
+            <a href="/join" class="btn btn-primary btn-block">Join Game</a>
+        </div>
+    </div>
+
+    <div class="landing-footer">
+        Built by <a href="https://www.linkedin.com/in/rebeccafordon/" target="_blank" rel="noopener">Rebecca Fordon</a> for the 21st Century Lawyering course at Ohio State Moritz College of Law.
+        <a href="https://github.com/rlfordon/hallucination-game" target="_blank" rel="noopener">Source on GitHub</a>
+    </div>
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script src="{{ url_for('static', filename='js/common.js') }}"></script>
+<script src="{{ url_for('static', filename='js/landing.js') }}"></script>
+{% endblock %}

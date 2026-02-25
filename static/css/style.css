@@ -697,6 +697,75 @@ label {
     .citation.swapped::after { display: none; }
 }
 
+/* ── Landing Page ─────────────────────────────────────────────────────── */
+.landing-container {
+    max-width: 900px;
+    margin: 3rem auto;
+    text-align: center;
+}
+
+.landing-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.landing-container > p {
+    color: var(--gray-500);
+    margin-bottom: 2.5rem;
+}
+
+.mode-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    text-align: left;
+}
+
+.mode-card {
+    background: white;
+    border: 1px solid var(--gray-200);
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.mode-card h3 {
+    font-size: 1.125rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.mode-card > p {
+    color: var(--gray-500);
+    font-size: 0.875rem;
+    margin-bottom: 1.25rem;
+    flex: 1;
+}
+
+.landing-footer {
+    margin-top: 2.5rem;
+    font-size: 0.8125rem;
+    color: var(--gray-400);
+    text-align: center;
+}
+
+.landing-footer a {
+    color: var(--gray-500);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+}
+
+.landing-footer a:hover {
+    color: var(--accent);
+}
+
+@media (max-width: 768px) {
+    .mode-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* ── Utilities ────────────────────────────────────────────────────────── */
 .hidden { display: none !important; }
 .text-center { text-align: center; }

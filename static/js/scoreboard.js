@@ -22,6 +22,8 @@ const TYPE_COLORS = {
     misquotation: '#db2777'
 };
 
+let gameMode = 'multiplayer';
+
 async function init() {
     const data = await API.get('/api/scoreboard');
     if (data.error) {
@@ -29,10 +31,20 @@ async function init() {
         return;
     }
 
-    renderScores(data.scores);
-    renderTypeStats(data.type_stats);
-    renderDetails(data.scores);
-    initAnnotatedBriefSection(data.scores);
+    gameMode = data.mode || 'multiplayer';
+
+    if (gameMode === 'solitaire') {
+        document.querySelector('#scoreboardApp > h2').textContent = 'Your Results';
+        renderSolitaireScores(data.scores);
+        renderTypeStats(data.type_stats);
+        renderSolitaireDetails(data.scores);
+        autoLoadSolitaireBrief(data.scores);
+    } else {
+        renderScores(data.scores);
+        renderTypeStats(data.type_stats);
+        renderDetails(data.scores);
+        initAnnotatedBriefSection(data.scores);
+    }
 }
 
 function renderScores(scores) {
@@ -148,6 +160,105 @@ function renderDetails(scores) {
     }
 
     container.innerHTML = html;
+}
+
+// ── Solitaire Rendering ─────────────────────────────────────────────
+
+function renderSolitaireScores(scores) {
+    const grid = document.getElementById('scoresGrid');
+    const team = Object.values(scores)[0];
+    if (!team) { grid.innerHTML = ''; return; }
+
+    grid.innerHTML = `
+        <div class="score-card" style="border-color: var(--accent); border-width: 2px;">
+            <h3>Verification Score</h3>
+            <div class="score-total">${team.verification_score}</div>
+            <div style="font-size: 0.8125rem; color: var(--gray-500);">
+                ${team.flags_made} citations flagged
+            </div>
+        </div>
+    `;
+}
+
+function renderSolitaireDetails(scores) {
+    const container = document.getElementById('detailsSection');
+    const team = Object.values(scores)[0];
+    if (!team || team.verification_details.length === 0) {
+        container.innerHTML = '';
+        return;
+    }
+
+    let html = `
+        <div class="score-card mb-2">
+            <h3>Citation-by-Citation Results</h3>
+            <table class="detail-table">
+                <thead>
+                    <tr><th>Citation</th><th>Actually</th><th>Your Verdict</th><th>Points</th></tr>
+                </thead>
+                <tbody>
+                    ${team.verification_details.map(d => {
+                        let verdictClass = 'skip';
+                        if (d.verdict === 'fake' && d.is_fake) verdictClass = 'correct';
+                        else if (d.verdict === 'fake' && !d.is_fake) verdictClass = 'incorrect';
+                        else if (d.verdict === 'legit' && !d.is_fake) verdictClass = 'correct';
+                        else if (d.verdict === 'legit' && d.is_fake) verdictClass = 'incorrect';
+
+                        return `<tr>
+                            <td>${d.citation_id}</td>
+                            <td>${d.is_fake ? '<span style="color:var(--red);">Altered</span>' : '<span style="color:var(--green);">Original</span>'}</td>
+                            <td class="${verdictClass}">${d.verdict === 'fake' ? 'Flagged' : d.verdict === 'legit' ? 'Legit' : 'Skipped'}</td>
+                            <td>${d.points > 0 ? '+' : ''}${d.points}</td>
+                        </tr>`;
+                    }).join('')}
+                </tbody>
+            </table>
+        </div>
+        <div class="text-center mt-2">
+            <a href="/" class="btn btn-primary">Play Again</a>
+        </div>
+    `;
+
+    container.innerHTML = html;
+}
+
+async function autoLoadSolitaireBrief(scores) {
+    const section = document.getElementById('annotatedBriefSection');
+    if (!section) return;
+
+    const teams = Object.entries(scores);
+    if (teams.length === 0) return;
+
+    const [teamId, teamData] = teams[0];
+
+    section.style.display = '';
+    // Hide the team dropdown for solitaire
+    const formGroup = document.querySelector('#annotatedBriefSection .form-group');
+    if (formGroup) formGroup.style.display = 'none';
+
+    const data = await ReviewBrief.loadReviewBrief(teamId, API.headers());
+    if (data.error) return;
+
+    abBriefData = data.brief;
+    abAnnotations = data.annotations;
+
+    const info = document.getElementById('briefTeamInfo');
+    info.textContent = 'Annotated brief showing all hallucinations';
+
+    ReviewBrief.setClickCallback(function (citationId) {
+        ReviewBrief.renderAnnotationPanel(
+            document.getElementById('annotationPanel'),
+            citationId, abAnnotations, abBriefData, true
+        );
+    });
+
+    const container = document.getElementById('annotatedBriefContainer');
+    container.classList.remove('hidden');
+    ReviewBrief.renderAnnotatedBrief(
+        document.getElementById('annotatedBriefText'),
+        abBriefData, abAnnotations, true
+    );
+    document.getElementById('annotationPanel').innerHTML =
+        '<div class="empty-state">Select a highlighted citation to see details</div>';
 }
 
 // ── Annotated Brief Review ──────────────────────────────────────────
