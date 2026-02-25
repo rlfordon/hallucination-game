@@ -167,7 +167,13 @@ async function assignPlayer(playerId, teamId) {
     pollStatus();
 }
 
+let _lastRenderedPhase = null;
+
 function renderControls(phase) {
+    // Don't re-render if phase hasn't changed — protects user-edited input values
+    if (phase === _lastRenderedPhase) return;
+    _lastRenderedPhase = phase;
+
     const container = document.getElementById('controlButtons');
     let html = '';
 
