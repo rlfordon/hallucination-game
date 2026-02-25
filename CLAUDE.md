@@ -14,7 +14,7 @@ Runs on **port 5001** (`http://localhost:5001`). Port 5000 is reserved by AirPla
 
 - **Backend**: Flask (app.py), SQLite (database.py), game logic (game_state.py)
 - **Frontend**: Vanilla JS, served from `static/js/` and `templates/`
-- **Shared JS**: `static/js/common.js` — API client, `escapeHtml()`, `Timer`. Loaded by all pages.
+- **Shared JS**: `static/js/common.js` — API client, `escapeHtml()`, `Timer`. Loaded by all pages. `API.token` inits as `null`; each page sets credentials in its own `DOMContentLoaded` handler (student pages use `session_token`, professor uses `prof_session_token`).
 - **Data**: JSON files in `data/briefs/` and `data/hallucinations/`
 
 ## Brief Data Model (`data/briefs/<brief_id>.json`)

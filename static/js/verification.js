@@ -91,13 +91,12 @@ function selectCitation(citationId) {
 function renderSidePanel(citationId) {
     const panel = document.getElementById('sidePanel');
 
-    // Find the citation display text
+    // Find the primary (non-supra) citation display text
     let displayText = citationId;
     for (const para of briefData.paragraphs) {
         for (const cite of (para.citations || [])) {
-            if (cite.citation_id === citationId) {
+            if (cite.citation_id === citationId && !cite.supra) {
                 displayText = cite.display_text;
-                break;
             }
         }
     }
@@ -185,4 +184,8 @@ function startPolling() {
     });
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+    API.token = localStorage.getItem('session_token');
+    API.gameId = localStorage.getItem('game_id');
+    init();
+});

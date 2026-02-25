@@ -254,60 +254,60 @@
       "id": "para_string_cite",
       "section": "III.A.2",
       "type": "body",
-      "text": "Plaintiff’s boilerplate and conclusory averments are not accompanied by factual allegations sufficient to raise a plausible claim for alleged bad faith. Courts in this Circuit have routinely dismissed bad faith claims with such “bare-bones” and conclusory allegations. See Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 136 (3d. Cir. 2012); Rosenthal v. Am. States Ins. Co., 2019 U.S. Dist. LEXIS 50485, *14 (M.D. Pa. 2019); Moran v. United Servs. Auto. Ass’n, 2019 U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019); Clarke v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 21507, *16 (M.D. Pa. 2019); McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19806, at *3 (E.D. Pa. 2019); Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124, at *1 (E.D. Pa. 2018); Jones v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017); Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159125, at *9-10 (E.D. Pa. 2015); Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 591 (E.D. Pa. 2010).",
+      "text": "Plaintiff’s boilerplate and conclusory averments are not accompanied by factual allegations sufficient to raise a plausible claim for alleged bad faith. Courts in this Circuit have routinely dismissed bad faith claims with such “bare-bones” and conclusory allegations. See Smith v. State Farm Mut. Auto Ins. Co., 506 Fed. Appx. 133, 136 (3d. Cir. 2012); Rosenthal v. Am. States Ins. Co., 2019 U.S. Dist. LEXIS 50485, *14 (M.D. Pa. 2019); Moran v. United Servs. Auto. Ass’n, 2019 U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019); Clarke v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 21507, *16 (M.D. Pa. 2019); McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19806, at *3 (E.D. Pa. 2019); Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124, at *1 (E.D. Pa. 2018); Jones v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017); Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 192, at *9-10 (E.D. Pa. 2015); Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 591 (E.D. Pa. 2010).",
       "citations": [
         {
           "citation_id": "cite_07",
           "start": 273,
-          "end": 351,
-          "display_text": "Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 136 (3d. Cir. 2012)"
+          "end": 352,
+          "display_text": "Smith v. State Farm Mut. Auto Ins. Co., 506 Fed. Appx. 133, 136 (3d. Cir. 2012)"
         },
         {
           "citation_id": "cite_08",
-          "start": 353,
-          "end": 435,
+          "start": 354,
+          "end": 436,
           "display_text": "Rosenthal v. Am. States Ins. Co., 2019 U.S. Dist. LEXIS 50485, *14 (M.D. Pa. 2019)"
         },
         {
           "citation_id": "cite_09",
-          "start": 437,
-          "end": 521,
+          "start": 438,
+          "end": 522,
           "display_text": "Moran v. United Servs. Auto. Ass’n, 2019 U.S. Dist. LEXIS 24080, *13 (M.D. Pa. 2019)"
         },
         {
           "citation_id": "cite_10",
-          "start": 523,
-          "end": 604,
+          "start": 524,
+          "end": 605,
           "display_text": "Clarke v. Liberty Mut. Ins. Co., 2019 U.S. Dist. LEXIS 21507, *16 (M.D. Pa. 2019)"
         },
         {
           "citation_id": "cite_11",
-          "start": 606,
-          "end": 697,
+          "start": 607,
+          "end": 698,
           "display_text": "McDonough v. State Farm Fire & Cas. Co., 2019 U.S. Dist. LEXIS 19806, at *3 (E.D. Pa. 2019)"
         },
         {
           "citation_id": "cite_12",
-          "start": 699,
-          "end": 790,
+          "start": 700,
+          "end": 791,
           "display_text": "Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124, at *1 (E.D. Pa. 2018)"
         },
         {
           "citation_id": "cite_13",
-          "start": 792,
-          "end": 870,
+          "start": 793,
+          "end": 871,
           "display_text": "Jones v. Allstate Ins. Co., 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017)"
         },
         {
           "citation_id": "cite_14",
-          "start": 872,
-          "end": 957,
-          "display_text": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159125, at *9-10 (E.D. Pa. 2015)"
+          "start": 873,
+          "end": 955,
+          "display_text": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 192, at *9-10 (E.D. Pa. 2015)"
         },
         {
           "citation_id": "cite_15",
-          "start": 959,
-          "end": 1040,
+          "start": 957,
+          "end": 1038,
           "display_text": "Atiyeh v. National Fire Ins. Co. of Hartford, 742 F. Supp. 2d 591 (E.D. Pa. 2010)"
         }
       ]
@@ -317,7 +317,22 @@
       "section": "III.A.2",
       "type": "body",
       "text": "In Jones v. Allstate Ins. Co., for example, the plaintiff sued his insurer for bad faith and breach of contract following a disagreement between the parties as to the value of plaintiff’s underinsured motorist claim. 2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017). Jones alleged that defendant had acted in bad faith by failing to:",
-      "citations": []
+      "citations": [
+        {
+          "citation_id": "cite_13",
+          "start": 3,
+          "end": 29,
+          "display_text": "Jones v. Allstate Ins. Co.",
+          "supra": true
+        },
+        {
+          "citation_id": "cite_13",
+          "start": 217,
+          "end": 267,
+          "display_text": "2017 U.S. Dist. LEXIS 93673, at *1 (E.D. Pa. 2017)",
+          "supra": true
+        }
+      ]
     },
     {
       "id": "para_jones_quote",
@@ -369,6 +384,13 @@
       "type": "body",
       "text": "This court has consistently dismissed bad faith counts at the preliminary stage, where, as here, the Complaint failed to include sufficient factual averments. See, e.g., Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124 (E.D. Pa. 2018) (“Absent additional facts regarding Kosmalski’s insurance claim and the accompanying investigation, negotiations, or communications in support of the contention that Progressive’s conduct was unreasonable and reckless, the Court is unable to infer bad faith on the part of Progressive.”); Pasqualino v. State Farm Mut. Auto. Ins. Co., 2015 U.S. Dist. LEXIS 69318 (E.D. Pa. 2015) (Motion to dismiss granted and bad faith claim dismissed).",
       "citations": [
+        {
+          "citation_id": "cite_12",
+          "start": 170,
+          "end": 254,
+          "display_text": "Kosmalski v. Progressive Preferred Ins., 2018 U.S. Dist. LEXIS 74124 (E.D. Pa. 2018)",
+          "supra": true
+        },
         {
           "citation_id": "cite_16",
           "start": 544,

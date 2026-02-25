@@ -210,4 +210,8 @@ async function loadAnnotatedBrief() {
         '<div class="empty-state">Select a highlighted citation to see details</div>';
 }
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+    API.token = localStorage.getItem('session_token');
+    API.gameId = localStorage.getItem('game_id');
+    init();
+});

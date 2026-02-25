@@ -363,4 +363,8 @@ function startPolling() {
 }
 
 // Init
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener('DOMContentLoaded', () => {
+    API.token = localStorage.getItem('session_token');
+    API.gameId = localStorage.getItem('game_id');
+    init();
+});

@@ -1,8 +1,8 @@
 /* common.js — Shared utilities for all game pages */
 
 const API = {
-    token: localStorage.getItem('session_token') || localStorage.getItem('prof_session_token'),
-    gameId: localStorage.getItem('game_id') || localStorage.getItem('prof_game_id'),
+    token: null,
+    gameId: null,
 
     headers() {
         const h = { 'Content-Type': 'application/json' };

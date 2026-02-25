@@ -270,6 +270,7 @@ def api_game_status():
         teams_data.append({
             'team_id': team['team_id'],
             'team_name': team['team_name'],
+            'fabrication_team': team['fabrication_team'],
             'players': [{'player_id': p['player_id'], 'player_name': p['player_name']} for p in team_players],
             'swap_count': len(swaps),
             'flag_count': len([f for f in flags if f['verdict'] == 'fake'])
@@ -290,6 +291,31 @@ def api_game_status():
 
 
 # ── Student API ──────────────────────────────────────────────────────────────
+
+@app.route('/api/choose-team', methods=['POST'])
+def api_choose_team():
+    """Let a student pick their own team from the lobby."""
+    player, err, code = require_player()
+    if err:
+        return err, code
+    if player['is_professor']:
+        return jsonify({'error': 'Professors use /api/game/assign-teams'}), 403
+
+    game = db.get_game(player['game_id'])
+    if not game or game['phase'] != 'lobby':
+        return jsonify({'error': 'Game is not in lobby phase'}), 400
+
+    team_id = (request.json or {}).get('team_id')
+    if not team_id:
+        return jsonify({'error': 'Missing team_id'}), 400
+
+    team = db.get_team(team_id)
+    if not team or team['game_id'] != game['game_id']:
+        return jsonify({'error': 'Invalid team'}), 400
+
+    db.assign_player_team(player['player_id'], team_id)
+    return jsonify({'ok': True, 'team_name': team['team_name']})
+
 
 @app.route('/api/join', methods=['POST'])
 def api_join():

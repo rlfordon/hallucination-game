@@ -156,6 +156,7 @@ def get_brief_for_display(brief_id, swaps=None):
         # Sort citations right-to-left by start offset to preserve positions
         sorted_cites = sorted(para['citations'], key=lambda c: c['start'], reverse=True)
 
+        any_replaced = False
         for cite in sorted_cites:
             cid = cite['citation_id']
             if cid not in swap_lookup:
@@ -177,6 +178,11 @@ def get_brief_for_display(brief_id, swaps=None):
                 # Update citation span
                 cite['display_text'] = new_text
                 cite['end'] = start + len(new_text)
+                any_replaced = True
+
+        # Recalculate offsets for all citations after text length changes
+        if any_replaced:
+            _recalculate_offsets(para)
 
     # Second pass: text region replacements (search all paragraphs)
     applied_swaps = set()

@@ -258,7 +258,7 @@
   },
   "cite_07": {
     "case_name": "Smith v. State Farm Mut. Auto Ins. Co.",
-    "original_display": "Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 136 (3d. Cir. 2012)",
+    "original_display": "Smith v. State Farm Mut. Auto Ins. Co., 506 Fed. Appx. 133, 136 (3d. Cir. 2012)",
     "options": {
       "fabricated_case": [
         {
@@ -272,13 +272,13 @@
         {
           "id": "cite_07_wc_1",
           "label": "Wrong pinpoint page (138 instead of 136)",
-          "replacement_citation": "Smith v. State Farm Mut. Auto Ins. Co., 56 Fed. Appx. 133, 138 (3d. Cir. 2012)",
+          "replacement_citation": "Smith v. State Farm Mut. Auto Ins. Co., 506 Fed. Appx. 133, 138 (3d. Cir. 2012)",
           "difficulty": "medium"
         },
         {
           "id": "cite_07_wc_2",
-          "label": "Wrong volume (65 instead of 56)",
-          "replacement_citation": "Smith v. State Farm Mut. Auto Ins. Co., 65 Fed. Appx. 133, 136 (3d. Cir. 2012)",
+          "label": "Wrong volume (560 instead of 506)",
+          "replacement_citation": "Smith v. State Farm Mut. Auto Ins. Co., 560 Fed. Appx. 133, 136 (3d. Cir. 2012)",
           "difficulty": "medium"
         }
       ],
@@ -468,7 +468,7 @@
   },
   "cite_14": {
     "case_name": "Mozzo v. Progressive Ins. Co.",
-    "original_display": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159125, at *9-10 (E.D. Pa. 2015)",
+    "original_display": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 192, at *9-10 (E.D. Pa. 2015)",
     "options": {
       "fabricated_case": [
         {
@@ -481,8 +481,8 @@
       "wrong_citation": [
         {
           "id": "cite_14_wc_1",
-          "label": "Transposed LEXIS digits (159215 instead of 159125)",
-          "replacement_citation": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 159215, at *9-10 (E.D. Pa. 2015)",
+          "label": "Transposed LEXIS digits (129 instead of 192)",
+          "replacement_citation": "Mozzo v. Progressive Ins. Co., 2015 U.S. Dist. LEXIS 129, at *9-10 (E.D. Pa. 2015)",
           "difficulty": "medium"
         }
       ],

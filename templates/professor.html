@@ -52,7 +52,7 @@
     <div class="control-card full-width hidden" id="reviewBriefSection">
         <h3>Review Team Briefs</h3>
         <div class="form-group">
-            <label for="reviewTeamSelect">Select fabricating team</label>
+            <label for="reviewTeamSelect">Select reviewing team</label>
             <select id="reviewTeamSelect" onchange="loadTeamBrief()">
                 <option value="">Choose a team...</option>
             </select>
@@ -302,14 +302,18 @@ function updateReviewSection(teams, phase) {
 }
 
 async function loadTeamBrief() {
-    const teamId = document.getElementById('reviewTeamSelect').value;
+    const reviewingTeamId = document.getElementById('reviewTeamSelect').value;
     const container = document.getElementById('reviewBriefContainer');
-    if (!teamId) {
+    if (!reviewingTeamId) {
         container.classList.add('hidden');
         return;
     }
 
-    const data = await ReviewBrief.loadReviewBrief(teamId, API.headers());
+    // Look up which team's fabrications this reviewing team is checking
+    const team = reviewTeams.find(t => t.team_id === reviewingTeamId);
+    const fabTeamId = team && team.fabrication_team ? team.fabrication_team : reviewingTeamId;
+
+    const data = await ReviewBrief.loadReviewBrief(fabTeamId, API.headers());
     if (data.error) {
         container.classList.remove('hidden');
         document.getElementById('reviewBriefText').textContent = 'Error: ' + data.error;
@@ -359,8 +363,13 @@ function updateTimer() {
     el.style.display = 'block';
 }
 
-// On load — check for existing session
+// On load — ensure professor panel only uses professor credentials
 document.addEventListener('DOMContentLoaded', () => {
+    const profToken = localStorage.getItem('prof_session_token');
+    const profGameId = localStorage.getItem('prof_game_id');
+    API.token = profToken || null;
+    API.gameId = profGameId || null;
+
     if (API.token && API.gameId) {
         API.get('/api/game/status').then(data => {
             if (!data.error) {

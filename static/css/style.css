@@ -487,6 +487,18 @@ label {
     padding: 0.125rem 0;
 }
 
+.team-card--selected {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-light);
+}
+
+.btn-outline {
+    background: transparent;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    cursor: default;
+}
+
 /* ── Professor Panel ──────────────────────────────────────────────────── */
 .professor-layout {
     display: grid;
