@@ -4,6 +4,7 @@ import json
 import os
 import copy
 import random
+import re
 
 DATA_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'data')
 
@@ -111,6 +112,53 @@ def generate_random_swaps(brief_id, num_swaps):
     return swaps
 
 
+def _extract_case_name(citation_text):
+    """Extract case name from a full citation string.
+
+    E.g. "Crawford v. Metropolitan Life Ins. Co., 553 U.S. 218 (2008)"
+    returns "Crawford v. Metropolitan Life Ins. Co."
+    """
+    m = re.search(r',\s+(?=\d|No\.)', citation_text)
+    if m:
+        return citation_text[:m.start()]
+    return citation_text
+
+
+def _replace_supra_case(supra_display, old_case_name, new_case_name):
+    """Replace case name in a supra reference's display text.
+
+    Handles abbreviated supras (e.g. "Ashcroft, supra" uses first party only)
+    and full-name supras (e.g. "McDonough v. State Farm Fire & Cas. Co., supra").
+    Preserves the abbreviation level of the original supra.
+    """
+    supra_idx = supra_display.find(', supra')
+    if supra_idx >= 0:
+        old_ref = supra_display[:supra_idx]
+        suffix = supra_display[supra_idx:]  # ", supra" + anything after
+        if ' v. ' not in old_ref:
+            # First-party-only supra (e.g. "Ashcroft, supra")
+            new_ref = new_case_name.split(' v. ')[0] if ' v. ' in new_case_name else new_case_name
+        elif ' v. ' in new_case_name:
+            # Match abbreviation level: count words after "v." in old ref
+            old_after_v = old_ref.split(' v. ', 1)[1]
+            old_word_count = len(old_after_v.split())
+            new_plaintiff, new_defendant = new_case_name.split(' v. ', 1)
+            new_def_words = new_defendant.split()
+            if old_word_count < len(new_def_words):
+                new_ref = f"{new_plaintiff} v. {' '.join(new_def_words[:old_word_count])}"
+            else:
+                new_ref = new_case_name
+        else:
+            new_ref = new_case_name
+        return new_ref + suffix
+
+    # No ", supra" — try direct case name replacement
+    if old_case_name and old_case_name in supra_display:
+        return supra_display.replace(old_case_name, new_case_name, 1)
+
+    return supra_display
+
+
 def get_brief_for_display(brief_id, swaps=None):
     """Get brief data suitable for display, optionally with swaps applied.
 
@@ -149,6 +197,8 @@ def get_brief_for_display(brief_id, swaps=None):
 
     # Apply swaps to paragraphs
     # First pass: citation text replacements (within the citation's own paragraph)
+    supra_case_updates = {}  # cid -> new_case_name (for supra pass)
+
     for para in modified['paragraphs']:
         if not para.get('citations'):
             continue
@@ -180,8 +230,33 @@ def get_brief_for_display(brief_id, swaps=None):
                 cite['end'] = start + len(new_text)
                 any_replaced = True
 
+                # Track for supra updates
+                if cid not in supra_case_updates:
+                    old_case = hallucinations.get(cid, {}).get('case_name', '')
+                    new_case = _extract_case_name(new_text)
+                    if old_case and new_case and old_case != new_case:
+                        supra_case_updates[cid] = new_case
+
         # Recalculate offsets for all citations after text length changes
         if any_replaced:
+            _recalculate_offsets(para)
+
+    # Supra pass: update supra references when their primary was swapped
+    for para in modified['paragraphs']:
+        any_changed = False
+        for cite in para.get('citations', []):
+            if not cite.get('supra') or cite['citation_id'] not in supra_case_updates:
+                continue
+            cid = cite['citation_id']
+            old_case = hallucinations.get(cid, {}).get('case_name', '')
+            new_case = supra_case_updates[cid]
+            old_display = cite['display_text']
+            new_display = _replace_supra_case(old_display, old_case, new_case)
+            if new_display != old_display:
+                para['text'] = para['text'].replace(old_display, new_display, 1)
+                cite['display_text'] = new_display
+                any_changed = True
+        if any_changed:
             _recalculate_offsets(para)
 
     # Second pass: text region replacements (search all paragraphs)
