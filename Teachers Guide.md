@@ -66,7 +66,7 @@ Students need access to at least some verification tools during the game. Here's
 |------|--------|-------|
 | **CaseStrainer** | Free, no account needed | Citation verification tool from UW Law. [wolf.law.uw.edu/casestrainer](https://wolf.law.uw.edu/casestrainer/) |
 | **CourtListener** | Free, no account needed | Good for checking if a case exists. [courtlistener.com](https://www.courtlistener.com) |
-| **IsThisCaseReal.com** | Free, no account needed | Quick case existence check. [isthiscasereal.com](https://isthiscasereal.com) |
+| **IsThisCaseReal.com** | Free, no account needed | Quick case existence check. Cannot verify Lexis-exclusive citations. [isthiscasereal.com](https://isthiscasereal.com) |
 | **Westlaw** | Institutional (law school) | Full citation verification, KeyCite, reading opinions. The Litigation Document Analyzer feature can process an entire brief but takes ~10+ minutes. |
 | **Lexis** | Institutional (law school) | Shepard's verification, reading opinions |
 | **Citation Extractor Gem** | Free (Google Gemini) | Extracts all citations from a brief into a table for batch checking |
@@ -126,6 +126,10 @@ Solitaire mode skips fabrication entirely — students only verify. The pedagogi
 ### Phase 2: Verification ("Catch the Fakes") — ~20–25 minutes
 
 > **Important timing note**: The first run used 15 minutes for verification — it wasn't enough. Students felt unable to attempt the harder hallucination types, and the Westlaw Litigation Document Analyzer didn't finish processing in time. **Use 20–25 minutes.** The time pressure lesson still lands — they still can't verify everything — but they need enough breathing room to at least *attempt* mischaracterizations and see their tool results come back.
+
+**Before the clock starts — have teams plan (2 minutes):**
+
+Students reported that time pressure "scrambled their brains" and they immediately started checking citations at random instead of coordinating. Before starting the verification timer, give teams 2 minutes to answer three questions: *What tools are we using? Who is checking what? What do we check first?* A brief planning moment dramatically improves the experience — and mirrors the real-world lesson that verification without a process is just panic.
 
 **What to tell students:**
 
@@ -199,6 +203,8 @@ The debrief is where the game experience becomes transferable knowledge. These q
 
 - **"After today, what's your non-negotiable verification minimum — the one thing you'll always do, even on a bad week?"** This is the "Bad Week Failsafe" question. Push students toward something concrete and sustainable: "I will always run a case existence check." "I will always read the actual opinion for the three most important citations." The point is not perfection; it's a floor.
 
+- **"Does the amount of AI-generated content change what verification is realistic?"** One student insight from the first run: if AI drafts an entire brief, manual verification of every citation may not be feasible — which means the responsible choice might be narrowing how much AI drafts, not just verifying harder. This reframes verification as a constraint on AI use, not just a follow-up step.
+
 - **Court standing orders** (if you have time for a full segment): "Do the court orders you've seen address the types of hallucinations you missed today? Or do they mostly focus on the easy types?" Most standing orders require disclosure and certification that citations are real — they don't address mischaracterizations or misquotations. The game gives students firsthand evidence for why orders that stop at "certify your citations exist" aren't enough.
 
 ---
@@ -228,6 +234,7 @@ These are from the February 25, 2026 first run. I'll update as I run the game ag
 - **The fabrication phase taught the taxonomy.** Students debated the differences between hallucination types while choosing their swaps. "Is a wrong page number harder to catch than a wrong year?" — that's exactly the analysis I wanted them to do, and it happened organically.
 - **The results data drove the debrief.** Having concrete numbers (100% catch rate on fabricated cases, ~50% on mischaracterizations) was far more compelling than lecturing about the difficulty spectrum. Students could see their own blind spots.
 - **Concurrent team collaboration.** Each student joined individually on their own device and could make swaps simultaneously. Teams naturally divided up the citations.
+- **Students discovered research tools they didn't know existed.** Multiple students reported using Westlaw's Find & Print, Lexis Document Analysis, and CaseStrainer for the first time. The game created a reason to explore verification features they'd never had occasion to use. This is a side benefit worth naming in the debrief: "How many of you used a tool today you'd never tried before?"
 
 ### What to Watch For
 
