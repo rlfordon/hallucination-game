@@ -2,58 +2,76 @@
 
 **[Play it live](https://hallucination-game.replit.app/)**
 
-A web-based game that teaches law students to detect AI-generated citation hallucinations in legal briefs. In the classroom team mode, teams compete in two phases: first they "play the AI" by swapping real citations for fake ones, then they swap briefs and race to catch each other's fakes using cite-checking tools like Westlaw and CourtListener. A solo practice mode lets individual students sharpen their skills on their own.
+A web-based game where law students detect AI-generated citation hallucinations in real legal briefs. Teams compete to plant convincing fakes and then catch each other's fakes using cite-checking tools like Westlaw and CourtListener — all under time pressure. A solo practice mode is also available for individual study.
 
-Built for the **21st Century Lawyering** course at Ohio State Moritz College of Law, class session on Hallucinations: Causes, Detection, Mitigation.
+Built for the **21st Century Lawyering** course at Ohio State Moritz College of Law. First run: February 2026, 11 students, 3 teams.
 
-## Game Modes
+## Teacher's Guide
 
-### Solo Practice
-Jump straight into a brief with system-generated hallucinations. Choose how many citations to alter, flag what looks fake, and see your results immediately. No game code or professor needed.
+**[Read the full Teacher's Guide](Teachers%20Guide.md)** — everything you need to run the game in your own classroom, including:
+
+- Learning objectives and how the game addresses them
+- Step-by-step instructions for each phase
+- Suggested readings and pre-class preparation
+- Timing options (50, 75, or 85 minutes)
+- Debrief discussion questions
+- Assessment ideas (reflection prompts, standing orders analysis)
+- Lessons learned from the first run
+
+## How the Game Works
 
 ### Team Game (Classroom)
 
-#### Phase 0: Lobby
-- Professor creates a game session (generates a 6-character game code)
-- Students join by entering the code and their name
-- Students choose a team (default: 3 teams)
+1. **Fabrication** (~20 min) — Teams receive a legal brief with ~23 citations. They choose which citations to alter by selecting from pre-generated hallucination options across four types:
 
-#### Phase 1: Fabrication (~20 min)
-Each team receives a legal brief with ~23 clickable citations. For each citation, teams choose from pre-generated hallucination options across four types:
+   | Type | Difficulty | What It Tests |
+   |------|-----------|--------------|
+   | Fabricated Case | Easy | Does this case exist at all? |
+   | Wrong Citation | Medium | Are the volume/page/year correct? |
+   | Mischaracterization | Hard | Does the case actually say what the brief claims? |
+   | Misquotation | Hard | Is this quote accurate word-for-word? |
 
-| Type | Description | Difficulty |
-|------|-------------|------------|
-| Fabricated Case | Case doesn't exist at all | Easy-Medium |
-| Wrong Citation | Right case name, wrong volume/page/year | Medium |
-| Mischaracterization | Real case, but the brief misstates the holding | Hard |
-| Misquotation | Direct quote subtly altered | Hard |
+2. **Verification** (~20 min) — Teams swap briefs and race to flag the fakes. The altered brief looks identical to the original — no visual hints. Time pressure forces triage: you can't check all 23 citations, so which do you prioritize?
 
-Teams aim to alter 25-50% of citations. The professor can also skip this phase and have the system auto-generate swaps.
+3. **Reveal** — Results show detection rates by hallucination type. The pattern that emerges is the lesson: students catch fabricated cases easily but miss mischaracterizations and misquotations. That gap is where AI verification tools run out and human judgment begins.
 
-#### Phase 2: Verification (~15 min)
-Teams rotate briefs (Team A verifies Team B's work, B verifies C's, etc.). The altered brief looks identical to the original -- no visual hints. For each citation, students flag it as "Looks Legit" or "Flag as Fake." Time pressure forces triage.
+### Solo Practice
 
-#### Phase 3: Reveal & Scoreboard
-Results are revealed with per-team breakdowns, detection rates by hallucination type, and an annotated brief showing every swap with color-coded highlights.
-
-## Scoring
-
-- **Fabrication** (team mode only): +2 points per undetected fake
-- **Verification**: +2 for correctly flagging a fake, -1 for incorrectly flagging a real citation
-- Team mode total = fabrication + verification
+Jump straight into a brief with system-generated hallucinations. No game code, no teams, no timer. Good for pre-class homework or post-class reinforcement.
 
 ## The Brief
 
-The included brief is from **Rosario v. Liberty Mutual Personal Insurance Company** (E.D. Pa., 2:26-cv-00276-MAK) -- a motion to dismiss an insurance bad faith claim. It contains 23 citations covering familiar 1L concepts (12(b)(6) motions, Iqbal/Twombly pleading standards). Each citation has 2-4 pre-generated hallucination options across all four types.
+The included brief is from **Rosario v. Liberty Mutual Personal Insurance Company** (E.D. Pa., 2:26-cv-00276-MAK) — a motion to dismiss an insurance bad faith claim. It covers familiar 1L concepts (12(b)(6) motions, Iqbal/Twombly pleading standards), with 23 citations and 2–4 hallucination options per citation across all four types.
 
-## Running Locally
+## Run Your Own Instance
+
+The game is a Python/Flask app with no build step and no external API calls — all hallucination options are pre-generated. To run locally:
 
 ```bash
 pip install -r requirements.txt
 python app.py
 ```
 
-The app runs at `http://localhost:5001`. The professor dashboard is at `/professor`.
+Opens at `http://localhost:5001`. The professor dashboard is at `/professor`.
+
+For hosted deployment, the app runs on any platform that supports Python (Replit, Render, Railway, etc.). SQLite is the only database — no external database setup needed.
+
+## Add Your Own Briefs
+
+Each brief needs two JSON files:
+
+1. **Brief data** (`data/briefs/brief_[name].json`) — the brief text broken into paragraphs, with each citation's position and metadata
+2. **Hallucination options** (`data/hallucinations/brief_[name].json`) — pre-generated fakes for each citation, organized by type and difficulty
+
+Good briefs for this exercise have 15–25 citations, a mix of well-known and obscure cases, some direct quotations, and accessible legal concepts. Real briefs from PACER or CourtListener work best.
+
+After creating both files, validate with:
+
+```bash
+python scripts/validate_brief.py brief_[name]
+```
+
+The app discovers new briefs automatically. See [CLAUDE.md](CLAUDE.md) for the detailed data model and step-by-step authoring workflow.
 
 ## Project Structure
 
@@ -62,52 +80,20 @@ hallucination-game/
 ├── app.py                  # Flask routes and API endpoints
 ├── database.py             # SQLite database (game.db, auto-created)
 ├── game_state.py           # Brief loading, swap application, scoring
-├── requirements.txt        # flask>=3.0
-├── scripts/
-│   ├── parse_brief.py      # Parses raw brief text into structured JSON
-│   └── validate_brief.py   # Validates brief + hallucination data integrity
 ├── data/
-│   ├── briefs/
-│   │   └── brief_rosario.json      # Parsed brief with citation spans
-│   └── hallucinations/
-│       └── brief_rosario.json      # Pre-generated fake options per citation
-├── static/
-│   ├── css/style.css
-│   └── js/
-│       ├── common.js        # Shared API client, utilities, timer
-│       ├── landing.js       # Landing page / solitaire start
-│       ├── lobby.js         # Team game join flow
-│       ├── fabrication.js   # Phase 1: swap citations
-│       ├── verification.js  # Phase 2: flag citations
-│       ├── review-brief.js  # Annotated brief rendering
-│       └── scoreboard.js    # Phase 3: results display
-└── templates/
-    ├── base.html
-    ├── landing.html         # Mode selection landing page
-    ├── lobby.html           # Team game join + waiting room
-    ├── professor.html       # Professor control panel
-    ├── fabrication.html
-    ├── verification.html
-    └── scoreboard.html
+│   ├── briefs/             # Parsed briefs with citation spans
+│   └── hallucinations/     # Pre-generated hallucination options per citation
+├── scripts/
+│   ├── parse_brief.py      # Brief text → structured JSON
+│   └── validate_brief.py   # Data integrity checks
+├── static/                 # CSS and vanilla JS (no build step)
+└── templates/              # Flask/Jinja2 HTML templates
 ```
-
-## Tech Stack
-
-- **Backend**: Python / Flask
-- **Frontend**: Vanilla HTML/CSS/JS (no build step)
-- **Database**: SQLite
-- **Real-time**: Polling (every few seconds)
-- **AI calls**: None at runtime -- all hallucination options are pre-generated
-
-## Adding a New Brief
-
-1. Create `data/briefs/brief_[name].json` with paragraphs and citation spans
-2. Create `data/hallucinations/brief_[name].json` with fake options per citation
-3. Run `python scripts/validate_brief.py brief_[name]` to check for errors
-4. The app discovers new briefs automatically
-
-See `CLAUDE.md` for the detailed data model and step-by-step workflow.
 
 ## License
 
 [MIT](LICENSE)
+
+## Contact
+
+Rebecca Fordon — fordon.4@osu.edu
