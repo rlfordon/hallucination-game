@@ -1,0 +1,15 @@
+# Render Blueprint (free plan).
+# Caveat: free services have no persistent disk and sleep after 15 minutes idle, so game.db is
+# wiped whenever the service restarts or sleeps. Create the class game at the start of class,
+# not the night before. Solo practice is unaffected.
+services:
+  - type: web
+    name: hallucination-game
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: gunicorn --bind 0.0.0.0:$PORT app:app
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.11.11"
