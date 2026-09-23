@@ -1,6 +1,6 @@
 # Citation Hallucination Game
 
-**[Play it live](https://hallucination-game.replit.app/)**
+**[Play it live](https://hallucination-game-ctgj.onrender.com/)**
 
 A web-based game where law students detect AI-generated citation hallucinations in real legal briefs. Teams compete to plant convincing fakes and then catch each other's fakes using cite-checking tools like Westlaw and CourtListener — all under time pressure. A solo practice mode is also available for individual study.
 
@@ -54,7 +54,7 @@ python app.py
 
 Opens at `http://localhost:5001`. The professor dashboard is at `/professor`.
 
-For hosted deployment, the app runs on any platform that supports Python (Replit, Render, Railway, etc.). SQLite is the only database — no external database setup needed.
+For hosted deployment, the app runs on any platform that supports Python (Render, Railway, etc.). The live instance uses the free Render plan via `render.yaml`; because free services have no persistent disk and sleep after 15 minutes idle, create the class game at the start of class. SQLite is the only database — no external database setup needed.
 
 ## Add Your Own Briefs
 
